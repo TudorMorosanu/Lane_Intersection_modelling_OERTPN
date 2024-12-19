@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efe69f7d-2d9d-450f-8c0b-029228453653" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/Activation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/GuardMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/PetriNet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/PetriNetWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/PetriTransition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/Comparator/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/Comparator/ComparatorInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/Inversor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/OETPN_C/OETPN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/OETPN_C/OETPNInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/OETPN_C/PIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/OETPN_C/PIControllerInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/OETPN_C/Plant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/RoomHeatingSystem/HTC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/RoomHeatingSystem/HeaterTankPlant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/RoomHeatingSystem/RTC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/RoomHeatingSystem/RoomPlant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_FuzzyLab/RoomHeatingSystem/WheatherInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_TwoLakeSystem/Controller1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_TwoLakeSystem/Controller2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_UVS/Controller2F.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_UVS/Lane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_UVS/Lanes_Intersection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_UVS/TestDelay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DCS_UVS/TestSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataBoolean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataCarQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataFloat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataFloatFloat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataFuzzy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataNetworkCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataREL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataRELQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataSubPetriNet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataObjects/DataTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/CarQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FLRS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FLRSPart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FloatFloat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/Fuzzy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FuzzyVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/FuzzyVectorValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/NetworkCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/PlaceNameWithWeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/REL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/RELQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/SubPetri.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataOnly/TransferOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/FZ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/LogicConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/NetworkCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/PetriNetState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/PetriObjectType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/TransitionCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enumerations/TransitionOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputFloat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputFloatFloat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputFuzzy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputREL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUIs/InputString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HeatPipe/HeatPipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/PetriObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LanesIntersection/LanesIntersection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MetricsClasses/Metrics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MetricsClasses/PlaceTransition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNExperiments/Exp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNExperiments/Exp2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNExperiments/Exp3_Part1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNExperiments/Exp3_Part2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNExperiments/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/GraphArc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/GraphPlace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/GraphTransition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/OETPNShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OETPNGraphics/ShapeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/Guard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/GuardActivation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/GuardCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/PetriData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/Place.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PetriDataPackage/Transition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RTS_LAB/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RTS_LAB/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/FLRS1X1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/FLRS1X1Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/FLRS1X2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/FLRS2X1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/FLRS2X2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestFLRS/MathTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestNullFLRS/FLRS1X1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestNullFLRS/FLRS1X2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestNullFLRS/FLRS2X1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestFuzzy/TestNullFLRS/FLRS2X2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/DataOverNetwork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Functions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/LineChart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/SimpleChart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Text.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2qRKXYQhdV9ILJ0IRDpo2x0BL6a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LanesIntersection.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Maven.Project [compile].executor": "Run",
+    "Maven.Project [install].executor": "Run",
+    "Maven.Project [validate].executor": "Run",
+    "Maven.Project [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Teme/A4S1/DiscreteControlSystems/Lane_Intersection_modelling_OERTPN",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Teme\A4S1\DiscreteControlSystems\Lane_Intersection_modelling_OERTPN\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Lane_Intersection_modelling_OERTPN" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Lane_Intersection_modelling_OERTPN" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efe69f7d-2d9d-450f-8c0b-029228453653" name="Changes" comment="" />
+      <created>1734619987866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734619987866</updated>
+    </task>
+    <servers />
+  </component>
+</project>
