@@ -2,14 +2,10 @@ package LanesIntersection;
 
 import Components.*;
 import DataObjects.DataFloat;
-import DataOnly.PlaceNameWithWeight;
-import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
 
-import java.util.ArrayList;
-
-public class LanesIntersection {
+public class TestClass {
 
     public static void addNodes(PetriNet pn){
         DataFloat p1 = new DataFloat();
