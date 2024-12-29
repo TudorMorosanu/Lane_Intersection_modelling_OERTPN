@@ -4,10 +4,8 @@ import Components.PetriNet;
 
 public class RebreanuIntersection {
 
-    PetriNet pn;
-
-    public RebreanuIntersection(PetriNet pn){
-        this.pn = pn;
+    public static void generatePetriNet(PetriNet pn) {
+        
     }
 
 }

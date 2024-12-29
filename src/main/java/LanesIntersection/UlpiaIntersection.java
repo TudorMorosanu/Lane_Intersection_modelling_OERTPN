@@ -4,10 +4,8 @@ import Components.PetriNet;
 
 public class UlpiaIntersection {
 
-    PetriNet pn;
-
-    public UlpiaIntersection(PetriNet pn){
-        this.pn = pn;
+    public static void generatePetriNet(PetriNet pn) {
+        
     }
 
 }

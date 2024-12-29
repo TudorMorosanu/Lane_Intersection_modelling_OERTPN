@@ -4,10 +4,8 @@ import Components.PetriNet;
 
 public class VuiaIntersection {
 
-    PetriNet pn;
-
-    public VuiaIntersection(PetriNet pn){
-        this.pn = pn;
+    public static void generatePetriNet(PetriNet pn) {
+        
     }
 
 }
