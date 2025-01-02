@@ -250,7 +250,7 @@ public class ControllerVuia1 {
         pn.Transitions.add(t_f2);
 
 
-        PetriNetWindow frame = new PetriNetWindow(false);
+        PetriNetWindow frame = new PetriNetWindow(true);
         frame.petriNet = pn;
         pn.Delay = 2000;
         frame.setVisible(true);

@@ -334,7 +334,7 @@ public class ControllerUlpia {
         t_f3.Delay = 5;
         pn.Transitions.add(t_f3);
 
-        PetriNetWindow frame = new PetriNetWindow(false);
+        PetriNetWindow frame = new PetriNetWindow(true);
         frame.petriNet = pn;
         pn.Delay = 2000;
         frame.setVisible(true);

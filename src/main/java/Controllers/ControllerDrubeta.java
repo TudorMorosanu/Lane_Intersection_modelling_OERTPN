@@ -420,7 +420,7 @@ public class ControllerDrubeta {
         pn.Transitions.add(t_f4);
 
 
-        PetriNetWindow frame = new PetriNetWindow(false);
+        PetriNetWindow frame = new PetriNetWindow(true);
         frame.petriNet = pn;
         pn.Delay = 2000;
         frame.setVisible(true);
