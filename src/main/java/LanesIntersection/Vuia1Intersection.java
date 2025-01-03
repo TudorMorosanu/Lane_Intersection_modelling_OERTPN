@@ -1,7 +1,8 @@
 package LanesIntersection;
 
 import Components.*;
-import DataObjects.DataFloat;
+import DataObjects.DataCar;
+import DataObjects.DataCarQueue;
 import DataObjects.DataString;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
@@ -20,83 +21,88 @@ public class Vuia1Intersection {
         full.SetValue("full");
         pn.ConstantPlaceList.add(full);
 
-        DataFloat p1 = new DataFloat();
+        DataCar p1 = new DataCar();
         p1.SetName("iVuia_Pa1");
         pn.PlaceList.add(p1);
 
-        DataFloat p2 = new DataFloat();
+        DataCarQueue p2 = new DataCarQueue();
+        p2.Value.Size = 10;
         p2.SetName("iVuia_Px1");
         pn.PlaceList.add(p2);
 
-        DataFloat p3 = new DataFloat();
+        DataCar p3 = new DataCar();
         p3.SetName("iVuia_OP1");
         pn.PlaceList.add(p3);
 
-        DataFloat p4 = new DataFloat();
+        DataCar p4 = new DataCar();
         p4.SetName("iVuia_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataFloat p5 = new DataFloat();
+        DataCar p5 = new DataCar();
         p5.SetName("iVuia_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataFloat p6 = new DataFloat();
+        DataCar p6 = new DataCar();
         p6.SetName("iVuia_OPreq1");
         pn.PlaceList.add(p6);
 
-        DataFloat p7 = new DataFloat();
+        DataCar p7 = new DataCar();
         p7.SetName("iVuia_Pb1");
         pn.PlaceList.add(p7);
 
-        DataFloat p8 = new DataFloat();
+        DataCar p8 = new DataCar();
         p8.SetName("iVuia_PTL1");
         pn.PlaceList.add(p8);
 
-        DataFloat p9 = new DataFloat();
+        DataCar p9 = new DataCar();
         p9.SetName("iVuia_Pa4");
         pn.PlaceList.add(p9);
 
-        DataFloat p10 = new DataFloat();
+        DataCarQueue p10 = new DataCarQueue();
+        p10.Value.Size = 10;
         p10.SetName("iVuia_Px4");
         pn.PlaceList.add(p10);
 
-        DataFloat p11 = new DataFloat();
+        DataCar p11 = new DataCar();
         p11.SetName("iVuia_OP4");
         pn.PlaceList.add(p11);
 
-        DataFloat p12 = new DataFloat();
+        DataCar p12 = new DataCar();
         p12.SetName("iVuia_Usrreq4");
         pn.PlaceList.add(p12);
 
-        DataFloat p13 = new DataFloat();
+        DataCar p13 = new DataCar();
         p13.SetName("iVuia_PPTL4");
         pn.PlaceList.add(p13);
 
-        DataFloat p14 = new DataFloat();
+        DataCar p14 = new DataCar();
         p14.SetName("iVuia_OPreq4");
         pn.PlaceList.add(p14);
 
-        DataFloat p15 = new DataFloat();
+        DataCar p15 = new DataCar();
         p15.SetName("iVuia_Pb4");
         pn.PlaceList.add(p15);
 
-        DataFloat p16 = new DataFloat();
+        DataCar p16 = new DataCar();
         p16.SetName("iVuia_PTL4");
         pn.PlaceList.add(p16);
 
-        DataFloat p17 = new DataFloat();
+        DataCarQueue p17 = new DataCarQueue();
+        p17.Value.Size = 10;
         p17.SetName("iVuia_Po1");
         pn.PlaceList.add(p17);
 
-        DataFloat p18 = new DataFloat();
+        DataCar p18 = new DataCar();
         p18.SetName("iVuia_Poe1");
         pn.PlaceList.add(p18);
 
-        DataFloat p19 = new DataFloat();
+        DataCarQueue p19 = new DataCarQueue();
+        p19.Value.Size = 10;
         p19.SetName("iVuia_Po2");
         pn.PlaceList.add(p19);
 
-        DataFloat p21 = new DataFloat();
+        DataCarQueue p21 = new DataCarQueue();
+        p21.Value.Size = 10;
         p21.SetName("iVuia_PI1");
         pn.PlaceList.add(p21);
     }
