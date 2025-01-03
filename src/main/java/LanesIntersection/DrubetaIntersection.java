@@ -1,7 +1,8 @@
 package LanesIntersection;
 
 import Components.*;
-import DataObjects.DataFloat;
+import DataObjects.DataCar;
+import DataObjects.DataCarQueue;
 import DataObjects.DataString;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
@@ -20,163 +21,172 @@ public class DrubetaIntersection {
         full.SetValue("full");
         pn.ConstantPlaceList.add(full);
 
-        DataFloat p1 = new DataFloat();
+        DataCar p1 = new DataCar();
         p1.SetName("iDrub_Pa1");
         pn.PlaceList.add(p1);
 
-        DataFloat p2 = new DataFloat();
+        DataCarQueue p2 = new DataCarQueue();
         p2.SetName("iDrub_Px1");
+        p2.Value.Size = 10;
         pn.PlaceList.add(p2);
 
-        DataFloat p3 = new DataFloat();
+        DataCar p3 = new DataCar();
         p3.SetName("iDrub_OP1");
         pn.PlaceList.add(p3);
 
-        DataFloat p4 = new DataFloat();
+        DataCar p4 = new DataCar();
         p4.SetName("iDrub_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataFloat p5 = new DataFloat();
+        DataCar p5 = new DataCar();
         p5.SetName("iDrub_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataFloat p6 = new DataFloat();
+        DataCar p6 = new DataCar();
         p6.SetName("iDrub_OPreq1");
         pn.PlaceList.add(p6);
 
-        DataFloat p7 = new DataFloat();
+        DataCar p7 = new DataCar();
         p7.SetName("iDrub_Pb1");
         pn.PlaceList.add(p7);
 
-        DataFloat p8 = new DataFloat();
+        DataCar p8 = new DataCar();
         p8.SetName("iDrub_PTL1");
         pn.PlaceList.add(p8);
 
-        DataFloat p9 = new DataFloat();
+        DataCar p9 = new DataCar();
         p9.SetName("iDrub_Pa2");
         pn.PlaceList.add(p9);
 
-        DataFloat p10 = new DataFloat();
+        DataCarQueue p10 = new DataCarQueue();
+        p10.Value.Size = 10;
         p10.SetName("iDrub_Px2");
         pn.PlaceList.add(p10);
 
-        DataFloat p11 = new DataFloat();
+        DataCar p11 = new DataCar();
         p11.SetName("iDrub_OP2");
         pn.PlaceList.add(p11);
 
-        DataFloat p12 = new DataFloat();
+        DataCar p12 = new DataCar();
         p12.SetName("iDrub_Usrreq2");
         pn.PlaceList.add(p12);
 
-        DataFloat p13 = new DataFloat();
+        DataCar p13 = new DataCar();
         p13.SetName("iDrub_PPTL2");
         pn.PlaceList.add(p13);
 
-        DataFloat p14 = new DataFloat();
+        DataCar p14 = new DataCar();
         p14.SetName("iDrub_OPreq2");
         pn.PlaceList.add(p14);
 
-        DataFloat p15 = new DataFloat();
+        DataCar p15 = new DataCar();
         p15.SetName("iDrub_Pb2");
         pn.PlaceList.add(p15);
 
-        DataFloat p16 = new DataFloat();
+        DataCar p16 = new DataCar();
         p16.SetName("iDrub_PTL2");
         pn.PlaceList.add(p16);
 
-        DataFloat p17 = new DataFloat();
+        DataCar p17 = new DataCar();
         p17.SetName("iDrub_Pa3");
         pn.PlaceList.add(p17);
 
-        DataFloat p18 = new DataFloat();
+        DataCarQueue p18 = new DataCarQueue();
+        p18.Value.Size = 10;
         p18.SetName("iDrub_Px3");
         pn.PlaceList.add(p18);
 
-        DataFloat p19 = new DataFloat();
+        DataCar p19 = new DataCar();
         p19.SetName("iDrub_OP3");
         pn.PlaceList.add(p19);
 
-        DataFloat p20 = new DataFloat();
+        DataCar p20 = new DataCar();
         p20.SetName("iDrub_Usrreq3");
         pn.PlaceList.add(p20);
 
-        DataFloat p21 = new DataFloat();
+        DataCar p21 = new DataCar();
         p21.SetName("iDrub_PPTL3");
         pn.PlaceList.add(p21);
 
-        DataFloat p22 = new DataFloat();
+        DataCar p22 = new DataCar();
         p22.SetName("iDrub_OPreq3");
         pn.PlaceList.add(p22);
 
-        DataFloat p23 = new DataFloat();
+        DataCar p23 = new DataCar();
         p23.SetName("iDrub_Pb3");
         pn.PlaceList.add(p23);
 
-        DataFloat p24 = new DataFloat();
+        DataCar p24 = new DataCar();
         p24.SetName("iDrub_PTL3");
         pn.PlaceList.add(p24);
 
-        DataFloat p25 = new DataFloat();
+        DataCar p25 = new DataCar();
         p25.SetName("iDrub_Pa4");
         pn.PlaceList.add(p25);
 
-        DataFloat p26 = new DataFloat();
+        DataCarQueue p26 = new DataCarQueue();
+        p26.Value.Size = 10;
         p26.SetName("iDrub_Px4");
         pn.PlaceList.add(p26);
 
-        DataFloat p27 = new DataFloat();
+        DataCar p27 = new DataCar();
         p27.SetName("iDrub_OP4");
         pn.PlaceList.add(p27);
 
-        DataFloat p28 = new DataFloat();
+        DataCar p28 = new DataCar();
         p28.SetName("iDrub_Usrreq4");
         pn.PlaceList.add(p28);
 
-        DataFloat p29 = new DataFloat();
+        DataCar p29 = new DataCar();
         p29.SetName("iDrub_PPTL4");
         pn.PlaceList.add(p29);
 
-        DataFloat p30 = new DataFloat();
+        DataCar p30 = new DataCar();
         p30.SetName("iDrub_OPreq4");
         pn.PlaceList.add(p30);
 
-        DataFloat p31 = new DataFloat();
+        DataCar p31 = new DataCar();
         p31.SetName("iDrub_Pb4");
         pn.PlaceList.add(p31);
 
-        DataFloat p32 = new DataFloat();
+        DataCar p32 = new DataCar();
         p32.SetName("iDrub_PTL4");
         pn.PlaceList.add(p32);
 
-        DataFloat p33 = new DataFloat();
+        DataCarQueue p33 = new DataCarQueue();
+        p33.Value.Size = 10;
         p33.SetName("iDrub_Po1");
         pn.PlaceList.add(p33);
 
-        DataFloat p34 = new DataFloat();
+        DataCar p34 = new DataCar();
         p34.SetName("iDrub_Poe1");
         pn.PlaceList.add(p34);
 
-        DataFloat p35 = new DataFloat();
+        DataCarQueue p35 = new DataCarQueue();
+        p35.Value.Size = 10;
         p35.SetName("iDrub_Po2");
         pn.PlaceList.add(p35);
 
-        DataFloat p37 = new DataFloat();
+        DataCarQueue p37 = new DataCarQueue();
+        p37.Value.Size = 10;
         p37.SetName("iDrub_Po3");
         pn.PlaceList.add(p37);
 
-        DataFloat p38 = new DataFloat();
+        DataCar p38 = new DataCar();
         p38.SetName("iDrub_Poe3");
         pn.PlaceList.add(p38);
 
-        DataFloat p39 = new DataFloat();
+        DataCarQueue p39 = new DataCarQueue();
+        p39.Value.Size = 10;
         p39.SetName("iDrub_Po4");
         pn.PlaceList.add(p39);
 
-        DataFloat p40 = new DataFloat();
+        DataCar p40 = new DataCar();
         p40.SetName("iDrub_Poe4");
         pn.PlaceList.add(p40);
 
-        DataFloat p41 = new DataFloat();
+        DataCarQueue p41 = new DataCarQueue();
+        p41.Value.Size = 10;
         p41.SetName("iDrub_PI");
         pn.PlaceList.add(p41);
     }

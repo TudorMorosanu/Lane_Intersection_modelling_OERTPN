@@ -10,12 +10,12 @@ public class LanesStarter {
         MainModel.start();
 
         // create and start controllers
-        ControllerRebreanu.start();
-        ControllerMacedonski.start();
-        ControllerVuia1.start();
-        ControllerVuia2.start();
-        ControllerUlpia.start();
-        ControllerDrubeta.start();
+//        ControllerRebreanu.start();
+//        ControllerMacedonski.start();
+//        ControllerVuia1.start();
+//        ControllerVuia2.start();
+//        ControllerUlpia.start();
+//        ControllerDrubeta.start();
 
     }
 

@@ -1,7 +1,8 @@
 package LanesIntersection;
 
 import Components.*;
-import DataObjects.DataFloat;
+import DataObjects.DataCar;
+import DataObjects.DataCarQueue;
 import DataObjects.DataString;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
@@ -20,119 +21,126 @@ public class UlpiaIntersection {
         full.SetValue("full");
         pn.ConstantPlaceList.add(full);
 
-        DataFloat p1 = new DataFloat();
+        DataCar p1 = new DataCar();
         p1.SetName("iUlp_Pa1");
         pn.PlaceList.add(p1);
 
-        DataFloat p2 = new DataFloat();
+        DataCarQueue p2 = new DataCarQueue();
+        p2.Value.Size = 10;
         p2.SetName("iUlp_Px1");
         pn.PlaceList.add(p2);
 
-        DataFloat p3 = new DataFloat();
+        DataCar p3 = new DataCar();
         p3.SetName("iUlp_OP1");
         pn.PlaceList.add(p3);
 
-        DataFloat p4 = new DataFloat();
+        DataCar p4 = new DataCar();
         p4.SetName("iUlp_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataFloat p5 = new DataFloat();
+        DataCar p5 = new DataCar();
         p5.SetName("iUlp_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataFloat p6 = new DataFloat();
+        DataCar p6 = new DataCar();
         p6.SetName("iUlp_OPreq1");
         pn.PlaceList.add(p6);
 
-        DataFloat p7 = new DataFloat();
+        DataCar p7 = new DataCar();
         p7.SetName("iUlp_Pb1");
         pn.PlaceList.add(p7);
 
-        DataFloat p8 = new DataFloat();
+        DataCar p8 = new DataCar();
         p8.SetName("iUlp_PTL1");
         pn.PlaceList.add(p8);
 
-        DataFloat p9 = new DataFloat();
+        DataCar p9 = new DataCar();
         p9.SetName("iUlp_Pa2");
         pn.PlaceList.add(p9);
 
-        DataFloat p10 = new DataFloat();
+        DataCarQueue p10 = new DataCarQueue();
+        p10.Value.Size = 10;
         p10.SetName("iUlp_Px2");
         pn.PlaceList.add(p10);
 
-        DataFloat p11 = new DataFloat();
+        DataCar p11 = new DataCar();
         p11.SetName("iUlp_OP2");
         pn.PlaceList.add(p11);
 
-        DataFloat p12 = new DataFloat();
+        DataCar p12 = new DataCar();
         p12.SetName("iUlp_Usrreq2");
         pn.PlaceList.add(p12);
 
-        DataFloat p13 = new DataFloat();
+        DataCar p13 = new DataCar();
         p13.SetName("iUlp_PPTL2");
         pn.PlaceList.add(p13);
 
-        DataFloat p14 = new DataFloat();
+        DataCar p14 = new DataCar();
         p14.SetName("iUlp_OPreq2");
         pn.PlaceList.add(p14);
 
-        DataFloat p15 = new DataFloat();
+        DataCar p15 = new DataCar();
         p15.SetName("iUlp_Pb2");
         pn.PlaceList.add(p15);
 
-        DataFloat p16 = new DataFloat();
+        DataCar p16 = new DataCar();
         p16.SetName("iUlp_PTL2");
         pn.PlaceList.add(p16);
 
-        DataFloat p17 = new DataFloat();
+        DataCar p17 = new DataCar();
         p17.SetName("iUlp_Pa4");
         pn.PlaceList.add(p17);
 
-        DataFloat p18 = new DataFloat();
+        DataCarQueue p18 = new DataCarQueue();
+        p18.Value.Size = 10;
         p18.SetName("iUlp_Px4");
         pn.PlaceList.add(p18);
 
-        DataFloat p19 = new DataFloat();
+        DataCar p19 = new DataCar();
         p19.SetName("iUlp_OP4");
         pn.PlaceList.add(p19);
 
-        DataFloat p20 = new DataFloat();
+        DataCar p20 = new DataCar();
         p20.SetName("iUlp_Usrreq4");
         pn.PlaceList.add(p20);
 
-        DataFloat p21 = new DataFloat();
+        DataCar p21 = new DataCar();
         p21.SetName("iUlp_PPTL4");
         pn.PlaceList.add(p21);
 
-        DataFloat p22 = new DataFloat();
+        DataCar p22 = new DataCar();
         p22.SetName("iUlp_OPreq4");
         pn.PlaceList.add(p22);
 
-        DataFloat p23 = new DataFloat();
+        DataCar p23 = new DataCar();
         p23.SetName("iUlp_Pb4");
         pn.PlaceList.add(p23);
 
-        DataFloat p24 = new DataFloat();
+        DataCar p24 = new DataCar();
         p24.SetName("iUlp_PTL4");
         pn.PlaceList.add(p24);
 
-        DataFloat p25 = new DataFloat();
+        DataCarQueue p25 = new DataCarQueue();
+        p25.Value.Size = 10;
         p25.SetName("iUlp_Po2");
         pn.PlaceList.add(p25);
 
-        DataFloat p26 = new DataFloat();
+        DataCarQueue p26 = new DataCarQueue();
+        p26.Value.Size = 10;
         p26.SetName("iUlp_Po3");
         pn.PlaceList.add(p26);
 
-        DataFloat p27 = new DataFloat();
+        DataCar p27 = new DataCar();
         p27.SetName("iUlp_Poe3");
         pn.PlaceList.add(p27);
 
-        DataFloat p28 = new DataFloat();
+        DataCarQueue p28 = new DataCarQueue();
+        p28.Value.Size = 10;
         p28.SetName("iUlp_Po4");
         pn.PlaceList.add(p28);
 
-        DataFloat p29 = new DataFloat();
+        DataCarQueue p29 = new DataCarQueue();
+        p29.Value.Size = 10;
         p29.SetName("iUlp_PI");
         pn.PlaceList.add(p29);
     }
