@@ -7,7 +7,7 @@ import com.sun.tools.javac.Main;
 
 public class MainModel {
 
-    public static void main(String[] args) {
+    public static void start(){
 
         PetriNet pn = new PetriNet();
         System.out.println("Lanes Intersection!");
