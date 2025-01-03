@@ -5,7 +5,7 @@ import Components.PetriTransition;
 
 public class MainModel {
 
-    public MainModel(){
+    public static void start(){
 
         PetriNet pn = new PetriNet();
     }
