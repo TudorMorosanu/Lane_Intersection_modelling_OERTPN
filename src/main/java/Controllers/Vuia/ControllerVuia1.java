@@ -1,4 +1,4 @@
-package Controllers;
+package Controllers.Vuia;
 
 import Components.*;
 import DataObjects.DataString;
@@ -8,13 +8,13 @@ import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
 
-public class ControllerMacedonski {
+public class ControllerVuia1 {
 
     public static void start() {
 
         PetriNet pn = new PetriNet();
-        pn.PetriNetName = "Controller Macedonski";
-        pn.NetworkPort = 1082;
+        pn.PetriNetName = "Controller Vuia1";
+        pn.NetworkPort = 1083;
 
         DataString green = new DataString();
         green.SetName("green");
@@ -43,12 +43,12 @@ public class ControllerMacedonski {
 
         DataTransfer op1 = new DataTransfer();
         op1.SetName("op1");
-        op1.Value = new TransferOperation("localhost", "1080", "iMac_PTL1");
+        op1.Value = new TransferOperation("localhost", "1080", "iVuia_PTL1");
         pn.PlaceList.add(op1);
 
         DataTransfer op2 = new DataTransfer();
         op2.SetName("op2");
-        op2.Value = new TransferOperation("localhost", "1080", "iMac_PTL2");
+        op2.Value = new TransferOperation("localhost", "1080", "iVuia_PTL4");
         pn.PlaceList.add(op2);
 
         DataString ini = new DataString();

@@ -7,6 +7,7 @@ import DataOnly.CarQueue;
 import DataOnly.FloatFloat;
 import DataOnly.RELQueue;
 import DataOnly.SubPetri;
+import DataObjects.DataCar;
 import Enumerations.LogicConnector;
 import Enumerations.PetriNetState;
 import Enumerations.PetriObjectType;
@@ -323,8 +324,106 @@ public class Condition implements Serializable {
 				return true;
 			break;
 		}
-		// ---------------------End of Modification-------------------------------
+		case HavePriorityCar: { //added
+			if (Value1 == null)
+				return false;
 
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCarQueue) {
+				if (util.HavePriority(Parent, ((CarQueue) Value1.GetValue()).Cars)) {
+					return true;
+				}
+			}
+			break;
+		}
+		case isPriorityCar: { //added
+			if (Value1 == null)
+				return false;
+
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCar) {
+				if (util.IsPriority(Parent, ((DataCar)Value1))) {
+					return true;
+				}
+			}
+			break;
+		}
+		case HaveBus: { //added
+			if (Value1 == null)
+				return false;
+
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCarQueue) {
+				if (util.HaveBus(Parent, ((CarQueue) Value1.GetValue()).Cars)) {
+					return true;
+				}
+			}
+			break;
+		}
+
+		case NotHaveBus: { //added
+			if (Value1 == null)
+				return true;
+
+			if (Value1.GetValue() == null)
+				return true;
+
+			if (Value1.GetType() == PetriObjectType.DataCarQueue) {
+				if (util.NotHaveBus(Parent, ((CarQueue) Value1.GetValue()).Cars)) {
+					return true;
+				}
+			}
+			break;
+		}
+		case isBus: { //added
+			if (Value1 == null)
+				return false;
+
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCar) {
+				if (util.IsBus(Parent, ((DataCar)Value1))) {
+					return true;
+				}
+			}
+			break;
+		}
+		case HaveTaxi: { //added
+			if (Value1 == null)
+				return false;
+
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCarQueue) {
+				if (util.HaveTaxi(Parent, ((CarQueue) Value1.GetValue()).Cars)) {
+					return true;
+				}
+			}
+			break;
+		}
+		case isTaxi: { //added
+			if (Value1 == null)
+				return false;
+
+			if (Value1.GetValue() == null)
+				return false;
+
+			if (Value1.GetType() == PetriObjectType.DataCar) {
+				if (util.IsTaxi(Parent, ((DataCar)Value1))) {
+					return true;
+				}
+			}
+			break;
+		}
+		// ---------------------End of Modification-------------------------------
 		default:
 			break;
 		}

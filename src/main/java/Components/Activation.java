@@ -178,6 +178,9 @@ public class Activation implements Serializable {
 		// ---------------------------------------------------------
 		if (Operation == TransitionOperation.FLRS)
 			FLRS_Fuzzy();
+
+		if (Operation == TransitionOperation.PopTaxiToQueue) // Added
+			PopTaxiToQueue();
 	}
 
 	private void MakeNull() throws CloneNotSupportedException {
@@ -1207,6 +1210,37 @@ public class Activation implements Serializable {
 			} else {
 				return;
 			}
+		}
+	}
+
+	private void PopTaxiToQueue() throws CloneNotSupportedException { // added
+
+		Integer outputIndex = util.GetIndexByName(OutputPlaceName, Parent.Parent.PlaceList);
+		Integer inputQIndex = util.GetIndexByName(InputPlaceNames.get(0), Parent.Parent.PlaceList);
+		Integer inputTIndex = util.GetIndexByName(InputPlaceNames.get(1), Parent.TempMarking);
+
+		PetriObject tempT = Parent.TempMarking.get(inputTIndex);
+		PetriObject resultT = null;
+
+		if (tempT instanceof DataString) {
+			PetriObject temp = ((CarQueue) ((DataCarQueue) Parent.Parent.PlaceList.get(inputQIndex)).GetValue())
+					.PopTaxi(((DataString) tempT));
+
+			PetriObject result = null;
+
+			if (temp == null)
+				return;
+
+			if (temp instanceof DataCar) {
+				result = (PetriObject) ((DataCar) temp).clone();
+			}
+
+
+			result.SetName(OutputPlaceName);
+			result.SetValue(temp.GetValue());
+
+			DataCarQueue out = (DataCarQueue) (Parent.Parent.PlaceList.get(outputIndex));
+			out.AddElement(result);
 		}
 	}
 

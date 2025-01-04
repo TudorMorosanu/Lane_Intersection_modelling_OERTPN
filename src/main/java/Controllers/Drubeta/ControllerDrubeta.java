@@ -1,4 +1,4 @@
-package Controllers;
+package Controllers.Drubeta;
 
 import Components.*;
 import DataObjects.DataString;

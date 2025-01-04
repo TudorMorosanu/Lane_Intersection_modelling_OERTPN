@@ -24,7 +24,7 @@ public class MainModel {
 
         pn.Delay = 2000;
 
-        PetriNetWindow frame = new PetriNetWindow(false);
+        PetriNetWindow frame = new PetriNetWindow(true);
         frame.petriNet = pn;
         frame.setVisible(true);
     }

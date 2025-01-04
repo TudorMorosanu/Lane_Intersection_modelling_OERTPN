@@ -268,6 +268,17 @@ public class RebreanuIntersection {
         grdT3_2.Activations.add(new Activation(t3, "iRbr_PTL1", TransitionOperation.Move, "iRbr_PTL1"));
         t3.GuardMappingList.add(grdT3_2);
 
+        // Third guard
+        Condition T3Ct3_1 = new Condition(t3, "iRbr_Px1", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT3_3 = new GuardMapping();
+        grdT3_3.condition = T3Ct3_1;
+
+        grdT3_3.Activations.add(new Activation(t3, "iRbr_Px1", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb1"));
+        grdT3_3.Activations.add(new Activation(t3, "iRbr_PPTL1", TransitionOperation.Move, "iRbr_PPTL1"));
+        grdT3_3.Activations.add(new Activation(t3, "iRbr_PTL1", TransitionOperation.Move, "iRbr_PTL1"));
+        t3.GuardMappingList.add(grdT3_3);
+
         t3.Delay = 1;
         pn.Transitions.add(t3);
 
@@ -412,6 +423,17 @@ public class RebreanuIntersection {
         grdT9_2.Activations.add(new Activation(t9, "iRbr_PTL2", TransitionOperation.Move, "iRbr_PTL2"));
         t9.GuardMappingList.add(grdT9_2);
 
+        // Third guard
+        Condition T9Ct3_1 = new Condition(t9, "iRbr_Px2", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT9_3 = new GuardMapping();
+        grdT9_3.condition = T9Ct3_1;
+
+        grdT9_3.Activations.add(new Activation(t9, "iRbr_Px2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb2"));
+        grdT9_3.Activations.add(new Activation(t9, "iRbr_PPTL2", TransitionOperation.Move, "iRbr_PPTL2"));
+        grdT9_3.Activations.add(new Activation(t9, "iRbr_PTL2", TransitionOperation.Move, "iRbr_PTL2"));
+        t9.GuardMappingList.add(grdT9_3);
+
         t9.Delay = 1;
         pn.Transitions.add(t9);
     }
@@ -552,6 +574,17 @@ public class RebreanuIntersection {
         grdT15_2.Activations.add(new Activation(t15, "iRbr_PTL3", TransitionOperation.Move, "iRbr_PTL3"));
         t15.GuardMappingList.add(grdT15_2);
 
+        // Third guard
+        Condition T15Ct3_1 = new Condition(t15, "iRbr_Px3", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT15_3 = new GuardMapping();
+        grdT15_3.condition = T15Ct3_1;
+
+        grdT15_3.Activations.add(new Activation(t15, "iRbr_Px3", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb3"));
+        grdT15_3.Activations.add(new Activation(t15, "iRbr_PPTL3", TransitionOperation.Move, "iRbr_PPTL3"));
+        grdT15_3.Activations.add(new Activation(t15, "iRbr_PTL3", TransitionOperation.Move, "iRbr_PTL3"));
+        t15.GuardMappingList.add(grdT15_3);
+
         t15.Delay = 1;
         pn.Transitions.add(t15);
     }
@@ -691,6 +724,17 @@ public class RebreanuIntersection {
         grdT21_2.Activations.add(new Activation(t21, "iRbr_PPTL4", TransitionOperation.Move, "iRbr_PPTL4"));
         grdT21_2.Activations.add(new Activation(t21, "iRbr_PTL4", TransitionOperation.Move, "iRbr_PTL4"));
         t21.GuardMappingList.add(grdT21_2);
+
+        // Third guard
+        Condition T21Ct3_1 = new Condition(t21, "iRbr_Px4", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT21_3 = new GuardMapping();
+        grdT21_3.condition = T21Ct3_1;
+
+        grdT21_3.Activations.add(new Activation(t21, "iRbr_Px4", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb4"));
+        grdT21_3.Activations.add(new Activation(t21, "iRbr_PPTL4", TransitionOperation.Move, "iRbr_PPTL4"));
+        grdT21_3.Activations.add(new Activation(t21, "iRbr_PTL4", TransitionOperation.Move, "iRbr_PTL4"));
+        t21.GuardMappingList.add(grdT21_3);
 
         t21.Delay = 1;
         pn.Transitions.add(t21);

@@ -489,4 +489,163 @@ public class Functions implements Serializable {
 		}
 		return false;
 	}
+
+	public boolean HavePriority(PetriTransition t, ArrayList<DataCar> list) { //added
+
+		if (list == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		for (int i = 0; i < list.size(); i++) {
+
+			if (list.get(i) != null && list.get(i).Value != null)
+
+				if (list.get(i).Value.isPriorityCar)
+
+					return true;
+
+		}
+
+		return false;
+
+	}
+
+	public boolean IsPriority(PetriTransition t, DataCar car) { //added
+
+		if (car == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		if (car != null && car.Value != null)
+
+			if (car.Value.isPriorityCar)
+
+				return true;
+
+
+		return false;
+
+	}
+
+	public boolean HaveBus(PetriTransition t, ArrayList<DataCar> list) { //added
+
+		if (list == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		for (int i = 0; i < list.size(); i++) {
+
+			if (list.get(i) != null && list.get(i).Value != null)
+
+				if (list.get(i).Value.isBus)
+
+					return true;
+
+		}
+
+		return false;
+
+	}
+
+	public boolean NotHaveBus(PetriTransition t, ArrayList<DataCar> list) { //added
+
+		if (list == null)
+
+			return true;
+
+		if (t == null)
+
+			return true;
+
+		for (int i = 0; i < list.size(); i++) {
+
+			if (list.get(i) != null && list.get(i).Value != null)
+
+				if (list.get(i).Value.isBus)
+
+					return false;
+
+		}
+
+		return true;
+
+	}
+
+	public boolean IsBus(PetriTransition t, DataCar car) { //added
+
+		if (car == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		if (car != null && car.Value != null)
+
+			if (car.Value.isBus)
+
+				return true;
+
+
+		return false;
+
+	}
+
+	public boolean HaveTaxi(PetriTransition t, ArrayList<DataCar> list) { //added
+
+		if (list == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		for (int i = 0; i < list.size(); i++) {
+
+			if (list.get(i) != null && list.get(i).Value != null)
+
+				if (list.get(i).Value.isTaxi)
+
+					return true;
+
+		}
+
+		return false;
+
+	}
+
+	public boolean IsTaxi(PetriTransition t, DataCar car) { //added
+
+		if (car == null)
+
+			return false;
+
+		if (t == null)
+
+			return false;
+
+		if (car != null && car.Value != null)
+
+			if (car.Value.isTaxi)
+
+				return true;
+
+
+		return false;
+
+	}
 }

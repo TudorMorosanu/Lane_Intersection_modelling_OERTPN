@@ -222,6 +222,17 @@ public class UlpiaIntersection {
         grdT3_2.Activations.add(new Activation(t3, "iUlp_PTL1", TransitionOperation.Move, "iUlp_PTL1"));
         t3.GuardMappingList.add(grdT3_2);
 
+        // Third guard
+        Condition T3Ct3_1 = new Condition(t3, "iUlp_Px1", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT3_3 = new GuardMapping();
+        grdT3_3.condition = T3Ct3_1;
+
+        grdT3_3.Activations.add(new Activation(t3, "iUlp_Px1", TransitionOperation.PopElementWithoutTarget, "iUlp_Pb1"));
+        grdT3_3.Activations.add(new Activation(t3, "iUlp_PPTL1", TransitionOperation.Move, "iUlp_PPTL1"));
+        grdT3_3.Activations.add(new Activation(t3, "iUlp_PTL1", TransitionOperation.Move, "iUlp_PTL1"));
+        t3.GuardMappingList.add(grdT3_3);
+
         t3.Delay = 1;
         pn.Transitions.add(t3);
 
@@ -323,6 +334,17 @@ public class UlpiaIntersection {
         grdt7_2.Activations.add(new Activation(t7, "iUlp_PPTL2", TransitionOperation.Move, "iUlp_PPTL2"));
         grdt7_2.Activations.add(new Activation(t7, "iUlp_PTL2", TransitionOperation.Move, "iUlp_PTL2"));
         t7.GuardMappingList.add(grdt7_2);
+
+        // First guard
+        Condition t7Ct3_1 = new Condition(t7, "iUlp_Px2", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdt7_3 = new GuardMapping();
+        grdt7_3.condition = t7Ct3_1;
+
+        grdt7_3.Activations.add(new Activation(t7, "iUlp_Px2", TransitionOperation.PopElementWithoutTarget, "iUlp_Pb2"));
+        grdt7_3.Activations.add(new Activation(t7, "iUlp_PPTL2", TransitionOperation.Move, "iUlp_PPTL2"));
+        grdt7_3.Activations.add(new Activation(t7, "iUlp_PTL2", TransitionOperation.Move, "iUlp_PTL2"));
+        t7.GuardMappingList.add(grdt7_3);
 
         t7.Delay = 1;
         pn.Transitions.add(t7);
@@ -502,6 +524,17 @@ public class UlpiaIntersection {
         grdT15_2.Activations.add(new Activation(t15, "iUlp_PPTL4", TransitionOperation.Move, "iUlp_PPTL4"));
         grdT15_2.Activations.add(new Activation(t15, "iUlp_PTL4", TransitionOperation.Move, "iUlp_PTL4"));
         t15.GuardMappingList.add(grdT15_2);
+
+        // Third guard
+        Condition T15Ct3_1 = new Condition(t15, "iUlp_Px4", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT15_3 = new GuardMapping();
+        grdT15_3.condition = T15Ct3_1;
+
+        grdT15_3.Activations.add(new Activation(t15, "iUlp_Px4", TransitionOperation.PopElementWithoutTarget, "iUlp_Pb4"));
+        grdT15_3.Activations.add(new Activation(t15, "iUlp_PPTL4", TransitionOperation.Move, "iUlp_PPTL4"));
+        grdT15_3.Activations.add(new Activation(t15, "iUlp_PTL4", TransitionOperation.Move, "iUlp_PTL4"));
+        t15.GuardMappingList.add(grdT15_3);
 
         t15.Delay = 1;
         pn.Transitions.add(t15);

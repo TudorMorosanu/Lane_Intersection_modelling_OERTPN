@@ -1,0 +1,183 @@
+ControllerRebreanu, ControllerDrubeta
+
+
+DataString:
+
+ini
+r1r2r3r4, g1r2r3r4, y1r2r3r4, r1g2r3r4, r1y2r3r4, r1r2g3r4, r1r2y3r4, r1r2r3g4, r1r2r3y4
+in1, in2, in3, in4
+P_f1, P_f2, P_f3, P_f4
+
+DataTransfer:
+
+op1 to PTL1
+op2 to PTL2
+op3 to PTL3
+op4 to PTL4
+
+iniT: ini != null
+    SendOverNetwork "red" to op1-4
+
+t0: r1r2r3r4 != null
+    g1r2r3r4 = r1r2r3r4
+    P_f1 = r1r2r3r4
+    SendOverNetwork "green" to op1
+
+t1: g1r2r3r4 != null
+    y1r2r3r4 = g1r2r3r4
+    SendOverNetwork "yellow" to op1
+
+t2: y1r2r3r4 != null
+    r1g2r3r4 = y1r2r3r4
+    P_f2 = y1r2r3r4
+    SendOverNetwork "red" to op1
+    SendOverNetwork "green" to op2
+
+t3: r1g2r3r4 != null
+    r1y2r3r4 = r1g2r3r4
+    SendOverNetwork "yellow" to op2
+
+t4: r1y2r3r4 != null
+    r1r2g3r4 = r1y2r3r4
+    P_f3 = r1y2r3r4
+    SendOverNetwork "red" to op2
+    SendOverNetwork "green to op3
+
+t5: r1r2g3r4 != null
+    r1r2y3r4 = r1r2g3r4
+    SendOverNetwork "yellow" to op3
+
+t6: r1r2y3r4 != null
+    r1r2r3g4 = r1r2y3r4
+    P_f4 = r1r2y3r4
+    SendOverNetwork "red" to op3
+    SendOverNetwork "green" to op4
+
+t7: r1r2r3g4 != null
+    r1r2r3y4 = r1r2r3g4
+    SendOverNetwork "yellow" to op4
+
+t8: r1r2r3y4 != null
+    r1r2r3r4 = r1r2r3y4
+    SendOverNetwork "red" to op4
+
+T_f: 
+    !!! tn is the transition before changing the light to yellow
+    grd1: (in = null) AND (P_f != null)
+        tn.SetDynamicDelay(5)
+    grd2: (in != null) AND (P_f != null)
+        tn.SetDynamicDelay(10)
+
+
+ControllerUlpia:
+
+    
+DataString:
+
+ini
+r1r2r3, g1r2r3, y1r2r3, r1g2r3, r1y2r3, r1r2g3, r1r2y3
+in1, in2, in3
+P_f1, P_f2, P_f3
+
+DataTransfer:
+
+op1 to PTL1
+op2 to PTL2
+op3 to PTL4
+
+iniT: ini != null
+    SendOverNetwork "red" to op1-3
+
+t0: r1r2r3 != null
+    g1r2r3 = r1r2r3
+    P_f1 = r1r2r3
+    SendOverNetwork "green" to op1
+
+t1: g1r2r3 != null
+    y1r2r3 = g1r2r3
+    SendOverNetwork "yellow" to op1
+
+t2: y1r2r3 != null
+    r1g2r3 = y1r2r3
+    P_f2 = y1r2r3
+    SendOverNetwork "red" to op1
+    SendOverNetwork "green" to op2
+
+t3: r1g2r3 != null
+    r1y2r3 = r1g2r3
+    SendOverNetwork "yellow" to op2
+
+t4: r1y2r3 != null
+    r1r2g3 = r1y2r3
+    P_f3 = r1y2r3
+    SendOverNetwork "red" to op2
+    SendOverNetwork "green to op3
+
+t5: r1r2g3 != null
+    r1r2y3 = r1r2g3
+    SendOverNetwork "yellow" to op3
+
+t6: r1r2y3 != null
+    r1r2r3 = r1r2y3
+    SendOverNetwork "red" to op3
+
+T_f: 
+    !!! tn is the transition before changing the light to yellow
+    grd1: (in = null) AND (P_f != null)
+        tn.SetDynamicDelay(5)
+    grd2: (in != null) AND (P_f != null)
+        tn.SetDynamicDelay(10)
+
+ControllerMacedonski, Vuia1 and Vuia2:
+
+    
+DataString:
+
+ini
+r1r2, g1r2, y1r2, r1g2, r1y2
+in1, in2
+P_f1, P_f2
+
+DataTransfer:
+
+Macedosnki, Vuia1:
+op1 to PTL1
+op2 to PTL4
+
+Vuia2:
+op1 to PTL2
+op2 to PTL3
+
+
+iniT: ini != null
+    SendOverNetwork "red" to op1-2
+
+t0: r1r2 != null
+    g1r2 = r1r2
+    P_f1 = r1r2
+    SendOverNetwork "green" to op1
+
+t1: g1r2 != null
+    y1r2 = g1r2
+    SendOverNetwork "yellow" to op1
+
+t2: y1r2 != null
+    r1g2 = y1r2
+    P_f2 = y1r2
+    SendOverNetwork "red" to op1
+    SendOverNetwork "green" to op2
+
+t3: r1g2 != null
+    r1y2 = r1g2
+    SendOverNetwork "yellow" to op2
+
+t4: r1y2 != null
+    r1r2 = r1y2
+    SendOverNetwork "red" to op2
+
+T_f: 
+    !!! tn is the transition before changing the light to yellow
+    grd1: (in = null) AND (P_f != null)
+        tn.SetDynamicDelay(5)
+    grd2: (in != null) AND (P_f != null)
+        tn.SetDynamicDelay(10)
