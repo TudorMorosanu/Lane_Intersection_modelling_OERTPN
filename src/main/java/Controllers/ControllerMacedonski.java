@@ -48,7 +48,7 @@ public class ControllerMacedonski {
 
         DataTransfer op2 = new DataTransfer();
         op2.SetName("op2");
-        op2.Value = new TransferOperation("localhost", "1080", "iMac_PTL2");
+        op2.Value = new TransferOperation("localhost", "1080", "iMac_PTL4");
         pn.PlaceList.add(op2);
 
         DataString ini = new DataString();

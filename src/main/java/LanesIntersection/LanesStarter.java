@@ -15,7 +15,7 @@ public class LanesStarter {
 //        ControllerVuia1.start();
 //        ControllerVuia2.start();
 //        ControllerUlpia.start();
-//        ControllerDrubeta.start();
+        ControllerDrubeta.start();
 
     }
 
