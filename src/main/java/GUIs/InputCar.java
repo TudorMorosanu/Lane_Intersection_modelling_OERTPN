@@ -11,6 +11,7 @@ import DataOnly.Car;
 import Utilities.DataOverNetwork;
 
 import javax.swing.JTextPane;
+import javax.swing.JCheckBox;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -49,7 +50,7 @@ public class InputCar extends JFrame {
 	 */
 	public InputCar() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 318, 278);
+		setBounds(100, 100, 318, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,6 +83,18 @@ public class InputCar extends JFrame {
 		txtPlace.setBounds(10, 21, 285, 20);
 		contentPane.add(txtPlace);
 
+		JCheckBox isPriorityCarCheckBox = new JCheckBox("isPriorityCar");
+		isPriorityCarCheckBox.setBounds(10, 200, 100, 20);
+		contentPane.add(isPriorityCarCheckBox);
+
+		JCheckBox isBusCheckBox = new JCheckBox("isBus");
+		isBusCheckBox.setBounds(10, 220, 100, 20);
+		contentPane.add(isBusCheckBox);
+
+		JCheckBox isTaxiCheckBox = new JCheckBox("isTaxi");
+		isTaxiCheckBox.setBounds(10, 240, 100, 20);
+		contentPane.add(isTaxiCheckBox);
+
 		JButton btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -92,7 +105,8 @@ public class InputCar extends JFrame {
 					DataOverNetwork DataToSend = new DataOverNetwork();
 
 					DataCar temp = new DataCar();
-					Car c = new Car(txtModel.getText(), txtNumber.getText(), txtTarget.getText().split(","));
+					Car c = new Car(txtModel.getText(), txtNumber.getText(), txtTarget.getText().split(","),
+							isPriorityCarCheckBox.isSelected(), isBusCheckBox.isSelected(), isTaxiCheckBox.isSelected());
 					temp.SetValue(c);
 					temp.SetName(txtPlace.getText());
 					DataToSend.petriObject = temp;
@@ -106,7 +120,7 @@ public class InputCar extends JFrame {
 				}
 			}
 		});
-		btnSend.setBounds(10, 192, 285, 44);
+		btnSend.setBounds(10, 280, 285, 44);
 		contentPane.add(btnSend);
 
 	}

@@ -176,6 +176,17 @@ public class Vuia2Intersection {
         grdT3_2.Activations.add(new Activation(t3, "iVuia_PTL2", TransitionOperation.Move, "iVuia_PTL2"));
         t3.GuardMappingList.add(grdT3_2);
 
+        // Third guard
+        Condition T3Ct3_1 = new Condition(t3, "iVuia_Px2", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT3_3 = new GuardMapping();
+        grdT3_3.condition = T3Ct3_1;
+
+        grdT3_3.Activations.add(new Activation(t3, "iVuia_Px2", TransitionOperation.PopElementWithoutTarget, "iVuia_Pb2"));
+        grdT3_3.Activations.add(new Activation(t3, "iVuia_PPTL2", TransitionOperation.Move, "iVuia_PPTL2"));
+        grdT3_3.Activations.add(new Activation(t3, "iVuia_PTL2", TransitionOperation.Move, "iVuia_PTL2"));
+        t3.GuardMappingList.add(grdT3_3);
+
         t3.Delay = 1;
         pn.Transitions.add(t3);
 
@@ -319,6 +330,17 @@ public class Vuia2Intersection {
         grdT9_2.Activations.add(new Activation(t9, "iVuia_PPTL3", TransitionOperation.Move, "iVuia_PPTL3"));
         grdT9_2.Activations.add(new Activation(t9, "iVuia_PTL3", TransitionOperation.Move, "iVuia_PTL3"));
         t9.GuardMappingList.add(grdT9_2);
+
+        // Third guard
+        Condition T9Ct3_1 = new Condition(t9, "iVuia_Px3", TransitionCondition.HaveCar);
+
+        GuardMapping grdT9_3 = new GuardMapping();
+        grdT9_3.condition = T9Ct3_1;
+
+        grdT9_3.Activations.add(new Activation(t9, "iVuia_Px3", TransitionOperation.PopElementWithoutTarget, "iVuia_Pb3"));
+        grdT9_3.Activations.add(new Activation(t9, "iVuia_PPTL3", TransitionOperation.Move, "iVuia_PPTL3"));
+        grdT9_3.Activations.add(new Activation(t9, "iVuia_PTL3", TransitionOperation.Move, "iVuia_PTL3"));
+        t9.GuardMappingList.add(grdT9_3);
 
         t9.Delay = 1;
         pn.Transitions.add(t9);

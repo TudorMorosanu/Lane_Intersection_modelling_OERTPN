@@ -258,18 +258,18 @@ public class MacedonskiIntersection {
 
         // T7 ------------------------------------------------
         PetriTransition t7 = new PetriTransition(pn);
-        t7.TransitionName = "iMac_Tu2";
-        t7.InputPlaceName.add("iMac_Pa2");
-        t7.InputPlaceName.add("iMac_Px2");
+        t7.TransitionName = "iMac_Tu4";
+        t7.InputPlaceName.add("iMac_Pa4");
+        t7.InputPlaceName.add("iMac_Px4");
 
-        Condition T7Ct1 = new Condition(t7, "iMac_Pa2", TransitionCondition.NotNull);
-        Condition T7Ct2 = new Condition(t7, "iMac_Px2", TransitionCondition.CanAddCars);
+        Condition T7Ct1 = new Condition(t7, "iMac_Pa4", TransitionCondition.NotNull);
+        Condition T7Ct2 = new Condition(t7, "iMac_Px4", TransitionCondition.CanAddCars);
         T7Ct1.SetNextCondition(LogicConnector.AND, T7Ct2);
 
         GuardMapping grdT7 = new GuardMapping();
         grdT7.condition = T7Ct1;
 
-        grdT7.Activations.add(new Activation(t7, "iMac_Pa2", TransitionOperation.AddElement, "iMac_Px2"));
+        grdT7.Activations.add(new Activation(t7, "iMac_Pa4", TransitionOperation.AddElement, "iMac_Px4"));
         t7.GuardMappingList.add(grdT7);
         t7.Delay = 0;
         pn.Transitions.add(t7);
@@ -279,18 +279,18 @@ public class MacedonskiIntersection {
 
         // T8 ------------------------------------------------
         PetriTransition t8 = new PetriTransition(pn);
-        t8.TransitionName = "iMac_Tout2";
-        t8.InputPlaceName.add("iMac_Pa2");
-        t8.InputPlaceName.add("iMac_Px2");
+        t8.TransitionName = "iMac_Tout4";
+        t8.InputPlaceName.add("iMac_Pa4");
+        t8.InputPlaceName.add("iMac_Px4");
 
-        Condition T8Ct1 = new Condition(t8, "iMac_Pa2", TransitionCondition.NotNull);
-        Condition T8Ct2 = new Condition(t8, "iMac_Px2", TransitionCondition.CanNotAddCars);
+        Condition T8Ct1 = new Condition(t8, "iMac_Pa4", TransitionCondition.NotNull);
+        Condition T8Ct2 = new Condition(t8, "iMac_Px4", TransitionCondition.CanNotAddCars);
         T8Ct1.SetNextCondition(LogicConnector.AND, T8Ct2);
 
         GuardMapping grdT8 = new GuardMapping();
         grdT8.condition = T8Ct1;
 
-        grdT8.Activations.add(new Activation(t8, "full", TransitionOperation.SendOverNetwork, "iMac_OP2"));
+        grdT8.Activations.add(new Activation(t8, "full", TransitionOperation.SendOverNetwork, "iMac_OP4"));
         t8.GuardMappingList.add(grdT8);
         t8.Delay = 0;
         pn.Transitions.add(t8);
@@ -300,35 +300,46 @@ public class MacedonskiIntersection {
 
         // T9 ------------------------------------------------
         PetriTransition t9 = new PetriTransition(pn);
-        t9.TransitionName = "iMac_Te2";
-        t9.InputPlaceName.add("iMac_Px2");
-        t9.InputPlaceName.add("iMac_Usrreq2");
-        t9.InputPlaceName.add("iMac_PPTL2");
-        t9.InputPlaceName.add("iMac_PTL2");
+        t9.TransitionName = "iMac_Te4";
+        t9.InputPlaceName.add("iMac_Px4");
+        t9.InputPlaceName.add("iMac_Usrreq4");
+        t9.InputPlaceName.add("iMac_PPTL4");
+        t9.InputPlaceName.add("iMac_PTL4");
 
         // First guard
-        Condition T9Ct1_1 = new Condition(t9, "iMac_Px2", TransitionCondition.HaveCar);
-        Condition T9Ct1_2 = new Condition(t9, "iMac_PTL2", TransitionCondition.Equal, "green");
+        Condition T9Ct1_1 = new Condition(t9, "iMac_Px4", TransitionCondition.HaveCar);
+        Condition T9Ct1_2 = new Condition(t9, "iMac_PTL4", TransitionCondition.Equal, "green");
         T9Ct1_1.SetNextCondition(LogicConnector.AND, T9Ct1_2);
 
         GuardMapping grdT9_1 = new GuardMapping();
         grdT9_1.condition = T9Ct1_1;
 
-        grdT9_1.Activations.add(new Activation(t9, "iMac_Px2", TransitionOperation.PopElementWithoutTarget, "iMac_Pb2"));
-        grdT9_1.Activations.add(new Activation(t9, "iMac_PPTL2", TransitionOperation.Move, "iMac_PPTL2"));
-        grdT9_1.Activations.add(new Activation(t9, "iMac_PTL2", TransitionOperation.Move, "iMac_PTL2"));
+        grdT9_1.Activations.add(new Activation(t9, "iMac_Px4", TransitionOperation.PopElementWithoutTarget, "iMac_Pb4"));
+        grdT9_1.Activations.add(new Activation(t9, "iMac_PPTL4", TransitionOperation.Move, "iMac_PPTL4"));
+        grdT9_1.Activations.add(new Activation(t9, "iMac_PTL4", TransitionOperation.Move, "iMac_PTL4"));
         t9.GuardMappingList.add(grdT9_1);
 
         // Second guard
-        Condition T9Ct2_1 = new Condition(t9, "iMac_Usrreq2", TransitionCondition.NotNull);
+        Condition T9Ct2_1 = new Condition(t9, "iMac_Usrreq4", TransitionCondition.NotNull);
 
         GuardMapping grdT9_2 = new GuardMapping();
         grdT9_2.condition = T9Ct2_1;
 
-        grdT9_2.Activations.add(new Activation(t9, "iMac_Usrreq2", TransitionOperation.SendOverNetwork, "iMac_OPreq2"));
-        grdT9_2.Activations.add(new Activation(t9, "iMac_PPTL2", TransitionOperation.Move, "iMac_PPTL2"));
-        grdT9_2.Activations.add(new Activation(t9, "iMac_PTL2", TransitionOperation.Move, "iMac_PTL2"));
+        grdT9_2.Activations.add(new Activation(t9, "iMac_Usrreq4", TransitionOperation.SendOverNetwork, "iMac_OPreq4"));
+        grdT9_2.Activations.add(new Activation(t9, "iMac_PPTL4", TransitionOperation.Move, "iMac_PPTL4"));
+        grdT9_2.Activations.add(new Activation(t9, "iMac_PTL4", TransitionOperation.Move, "iMac_PTL4"));
         t9.GuardMappingList.add(grdT9_2);
+
+        // Third guard
+        Condition T9Ct3_1 = new Condition(t9, "iMac_Px4", TransitionCondition.HavePriorityCar);
+
+        GuardMapping grdT9_3 = new GuardMapping();
+        grdT9_3.condition = T9Ct3_1;
+
+        grdT9_3.Activations.add(new Activation(t9, "iMac_Px4", TransitionOperation.PopElementWithoutTarget, "iMac_Pb4"));
+        grdT9_3.Activations.add(new Activation(t9, "iMac_PPTL4", TransitionOperation.Move, "iMac_PPTL4"));
+        grdT9_3.Activations.add(new Activation(t9, "iMac_PTL4", TransitionOperation.Move, "iMac_PTL4"));
+        t9.GuardMappingList.add(grdT9_3);
 
         t9.Delay = 1;
         pn.Transitions.add(t9);
@@ -338,18 +349,18 @@ public class MacedonskiIntersection {
 
         // T10 ------------------------------------------------
         PetriTransition t10 = new PetriTransition(pn);
-        t10.TransitionName = "iMac_Ti2";
-        t10.InputPlaceName.add("iMac_Pb2");
+        t10.TransitionName = "iMac_Ti4";
+        t10.InputPlaceName.add("iMac_Pb4");
         t10.InputPlaceName.add("iMac_PI");
 
-        Condition T10Ct1 = new Condition(t10, "iMac_Pb2", TransitionCondition.NotNull);
+        Condition T10Ct1 = new Condition(t10, "iMac_Pb4", TransitionCondition.NotNull);
         Condition T10Ct2 = new Condition(t10, "iMac_PI", TransitionCondition.CanAddCars);
         T10Ct1.SetNextCondition(LogicConnector.AND, T10Ct2);
 
         GuardMapping grdT10 = new GuardMapping();
         grdT10.condition = T10Ct1;
 
-        grdT10.Activations.add(new Activation(t10, "iMac_Pb2", TransitionOperation.AddElement, "iMac_PI"));
+        grdT10.Activations.add(new Activation(t10, "iMac_Pb4", TransitionOperation.AddElement, "iMac_PI"));
         t10.GuardMappingList.add(grdT10);
         t10.Delay = 0;
         pn.Transitions.add(t10);

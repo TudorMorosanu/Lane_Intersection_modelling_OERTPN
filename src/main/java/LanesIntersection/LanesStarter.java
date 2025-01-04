@@ -1,6 +1,10 @@
 package LanesIntersection;
 
-import Controllers.*;
+import Controllers.Drubeta.*;
+import Controllers.Macedonski.*;
+import Controllers.Rebreanu.*;
+import Controllers.Ulpia.*;
+import Controllers.Vuia.*;
 
 public class LanesStarter {
 
@@ -10,11 +14,11 @@ public class LanesStarter {
         MainModel.start();
 
         // create and start controllers
-//        ControllerRebreanu.start();
-//        ControllerMacedonski.start();
-//        ControllerVuia1.start();
-//        ControllerVuia2.start();
-//        ControllerUlpia.start();
+        ControllerRebreanu.start();
+        ControllerMacedonski.start();
+        ControllerVuia1.start();
+        ControllerVuia2.start();
+        ControllerUlpia.start();
         ControllerDrubeta.start();
 
     }

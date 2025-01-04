@@ -1005,7 +1005,7 @@
                 <position x="2895.0" y="4995.0"/>
             </graphics>
             <name>
-                <value>iDrub_OPreq1</value>
+                <value>P134</value>
                 <graphics>
                     <offset x="-5.0" y="35.0"/>
                 </graphics>
@@ -1045,7 +1045,7 @@
                 <position x="2820.0" y="5250.0"/>
             </graphics>
             <name>
-                <value>iDrub_OPreq2</value>
+                <value>P136</value>
                 <graphics>
                     <offset x="-5.0" y="35.0"/>
                 </graphics>
@@ -1105,7 +1105,7 @@
                 <position x="3150.0" y="5310.0"/>
             </graphics>
             <name>
-                <value>iDrub_OPreq3</value>
+                <value>P139</value>
                 <graphics>
                     <offset x="-5.0" y="35.0"/>
                 </graphics>
@@ -1245,7 +1245,7 @@
                 <position x="3165.0" y="4965.0"/>
             </graphics>
             <name>
-                <value>iDrub_OPreq4</value>
+                <value>P143</value>
                 <graphics>
                     <offset x="-5.0" y="35.0"/>
                 </graphics>

@@ -32,5 +32,7 @@ public enum TransitionOperation implements Serializable{
 	Add_Fuzzy,
 	Sub_Fuzzy,
 	Prod_Fuzzy,
-	Div_Fuzzy
+	Div_Fuzzy,
+
+	PopTaxiToQueue
 }
