@@ -34,22 +34,27 @@ DataString:
 
 iRbr_PTL1, iRbr_PTL2, iRbr_PTL3, iRbr_PTL4
 iRbr_PPTL1, iRbr_PPTL2, iRbr_PPTL3, iRbr_PPTL4
+iRbr_CPTL1, iRbr_CPTL2, iRbr_CPTL3, iRbr_CPTL4
 iRbr_Usrreq1, iRbr_Usrreq2, iRbr_Usrreq3, iRbr_Usrreq4
 
 iMac_PTL1, iMac_PTL4
 iMac_PPTL1, iMac_PPTL4
+iMac_CPTL1
 iMac_Usrreq1, IMac_Usrreq4
 
 iVuia_PTL1, iVuia_PTL2, iVuia_PTL3, iVuia_PTL4
 iVuia_PPTL1, iVuia_PPTL2, iVuia_PPTL3, iVuia_PPTL4
+iVuia_CPTL1, iVuia_CPTL2, iVuia_CPTL3, iVuia_CPTL4
 iVuia_Usrreq1, iVuia_Usrreq2, iVuia_Usrreq3, iVuia_Usrreq4
 
 iUlp_PTL1, iUlp_PTL2, iUlp_PTL4
 iUlp_PPTL1, iUlp_PPTL2, iUlp_PPTL4
+iUlp_CPTL1, iUlp_CPTL2, iUlp_CPTL3, iUlp_CPTL4
 iUlp_Usrreq1, iUlp_Usrreq2, iUlp_Usrreq4
 
 iDrub_PTL1, iDrub_PTL2, iDrub_PTL3, iDrub_PTL4
 iDrub_PPTL1, iDrub_PPTL2, iDrub_PPTL3, iDrub_PPTL4
+iDrub_CPTL1, iDrub_CPTL2, iDrub_CPTL3, iDrub_CPTL4
 iDrub_Usrreq1, iDrub_Usrreq2, iDrub_Usrreq3, iDrub_Usrreq4
 
 
@@ -80,7 +85,7 @@ Tun/Tun_1: (Pan != null) AND (Pxn/Pxn_1.CanAddCars)
 Tun_2: (Pxn_1.HaveCar) AND (Pxn_2.CanAddCars) AND (Pxn_1.NotHaveBus)
     PopElementWithoutTargetToQueue Pxn_1 to Pxn_2
 
-Ten: (Pxn/Pxn_2.HaveCar) AND (PTLn == "green")
+Ten: (Pxn/Pxn_2.HaveCar) AND (PTLn == "green") AND (CPTLn == "green")   !!! EXCEPT iMac_Te4
 grd1: PopElementWithoutTarget Pxn/Pxn_2 to Pbn
       PTLn = PTLn
       PPTLn = PPTLn
@@ -94,7 +99,7 @@ Tin: (Pbn != null) AND (PI.CanAddCars)
 Tgn: (PI.HaveCarForMe) AND (Pon.CanAddCars)
     PopElementWithTargetToQueue PI to Pon
 
-Tgen: (Po1.HaveCar)
+Tgen: (Po1.HaveCar) AND (CPTLn == "green") 
     PopElementWithoutTarget Pon to Poen
 
 Toutn: (Pan != null) AND (Pxn/Pxn_1.CanNotAddCars)

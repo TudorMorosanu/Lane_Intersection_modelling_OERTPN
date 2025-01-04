@@ -1,0 +1,35 @@
+DataString:
+
+ini, Userreq
+yr, rg, ry, gr, wait
+
+DataTransfer:
+
+PTL to CPTLn
+PPTL to PPTLn
+
+iniT: ini != null
+    SendOverNetwork "green" to PTL
+    SendOverNetwork "red" to PPTL
+
+t0: (Userreq != null) AND (wait != null)
+    yr = wait
+    SendOverNetwork "yellow" to PTL
+
+t1: yr != null
+    rg = yr
+    SendOverNetwork "red" to PTL
+    SendOverNetwork "green" to PPTL
+
+t2: rg != null
+    ry = rg
+    SendOverNetwork "yellow" to PPTL
+
+t3: ry != null
+    gr = yr
+    SendOverNetwork "green" to PTL
+    SendOverNetwork "red" to PPTL
+
+t4: gr != null
+    wait = gr
+    
