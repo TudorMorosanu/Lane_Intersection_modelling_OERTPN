@@ -1,0 +1,108 @@
+DataCar:
+
+iRbr_Pa1, iRbr_Pa2, iRbr_Pa3, iRbr_Pa4, iDrub_Pa1, iDrub_Pa2, iDrub_Pa3, iDrub_Pa4,
+iVuia_Pa1, iVuia_Pa3, iUlp_Pa1, iUlp_Pa2, iMac_Pa1,
+iRbr_Pb1, iRbr_Pb2, iRbr_Pb3, iRbr_Pb4, iDrub_Pb1, iDrub_Pb2, iDrub_Pb3, iDrub_Pb4,
+iVuia_Pb1, iVuia_Pb3, iUlp_Pb1, iUlp_Pb2, iMac_Pb1,
+iRbr_Poe1, iRbr_Poe2, iRbr_Poe3, iRbr_Poe4, iMac_Poe1, iMac_Poe2, iVuia_Poe1, iVuia_Poe2, 
+iVuia_Poe4, iDrub_Poe1, iDrub_Poe2, iDrub_Poe3, iDrub_Poe4, iUlp_Poe2, iUlp_Poe3
+
+DataCarQueue:
+
+iRbr_PI
+iRbr_Px1_1, iRbr_Px1_2, iRbr_Px2_1, iRbr_Px2_2, iRbr_Px3_1, iRbr_Px3_2, iRbr_Px4_1, iRbr_Px4_2,
+iRbr_Pstation1, iRbr_Pstation3, iRbr_Pstation3, iRbr_Pstation4,
+iRbr_Po1, iRbr_Po2, iRbr_Po3, iRbr_Po4
+
+iMac_PI,
+iMac_Px1, iMac_Px4, iMac_Po1, iMac_Po2
+
+iVuia_PI1, iVuia_PI2
+iVuia_Px1, iVuia_Px2, iVuia_Px3, iVuia_Px4, 
+iVuia_Po1, iVuia_Po2, iVuia_Po4
+
+iUlp_PI, 
+iUlp_Px1, iUlp_Px2, iUlp_Px4,
+iUlp_Po2, iUlp_Po3, iUlp_Po4
+
+iDrub_PI
+iDrub_Px1_1, iDrub_Px1_2, iDrub_Px2_1, iDrub_Px2_2, iDrub_Px3_1, iDrub_Px3_2, iDrub_Px4_1, iDrub_Px4_2,
+iDrub_Pstation1, iDrub_Pstation3, iDrub_Pstation3, iDrub_Pstation4,
+iDrub_Po1, iDrub_Po2, iDrub_Po3, iDrub_Po4
+
+DataString:
+
+iRbr_PTL1, iRbr_PTL2, iRbr_PTL3, iRbr_PTL4
+iRbr_PPTL1, iRbr_PPTL2, iRbr_PPTL3, iRbr_PPTL4
+iRbr_Usrreq1, iRbr_Usrreq2, iRbr_Usrreq3, iRbr_Usrreq4
+
+iMac_PTL1, iMac_PTL4
+iMac_PPTL1, iMac_PPTL4
+iMac_Usrreq1, IMac_Usrreq4
+
+iVuia_PTL1, iVuia_PTL2, iVuia_PTL3, iVuia_PTL4
+iVuia_PPTL1, iVuia_PPTL2, iVuia_PPTL3, iVuia_PPTL4
+iVuia_Usrreq1, iVuia_Usrreq2, iVuia_Usrreq3, iVuia_Usrreq4
+
+iUlp_PTL1, iUlp_PTL2, iUlp_PTL4
+iUlp_PPTL1, iUlp_PPTL2, iUlp_PPTL4
+iUlp_Usrreq1, iUlp_Usrreq2, iUlp_Usrreq4
+
+iDrub_PTL1, iDrub_PTL2, iDrub_PTL3, iDrub_PTL4
+iDrub_PPTL1, iDrub_PPTL2, iDrub_PPTL3, iDrub_PPTL4
+iDrub_Usrreq1, iDrub_Usrreq2, iDrub_Usrreq3, iDrub_Usrreq4
+
+
+DataTransfer:
+
+iRbr_OP1, iRbr_OP2, iRbr_OP4, iRbr_OP4 to ControllerRebreanu in1-4
+iMac_OP1, iMac_OP4 to ControllerMacedonski in1, in2
+iVuia_OP1, iVuia_OP4 to ControllerVuia1 in1, in2
+iVuia_OP2, iVuia_OP3 to ControllerVuia2 in1, in2
+iUlp_OP1, iUlp_OP2, iUlp_OP4 to ControllerUlpia in1-3
+iDrub_OP1, iDrub_OP2, iDrub_OP4, iDrub_OP4 to ControllerDrubeta in1-4
+
+iRbr_OPreq1, iRbr_OPreq2, iRbr_OPreq3, iRbr_OPreq4
+iMac_OPreq1, iMac_OPreq4
+iVuia_OPreq1, iVuia_OPreq4
+iUlp_OPreq1, iUlp_OPreq2, iUlp_OPreq4
+iDrub_OPreq1, iDrub_OPreq2, iDrub_OPreq4, iDrub_OPreq4
+
+
+Transitions:
+
+n is the number of the lane
+
+
+Tun/Tun_1: (Pan != null) AND (Pxn/Pxn_1.CanAddCars)
+    AddElement Pan to Pxn/Pxn_1
+
+Tun_2: (Pxn_1.HaveCar) AND (Pxn_2.CanAddCars) AND (Pxn_1.NotHaveBus)
+    PopElementWithoutTargetToQueue Pxn_1 to Pxn_2
+
+Ten: (Pxn/Pxn_2.HaveCar) AND (PTLn == "green")
+grd1: PopElementWithoutTarget Pxn/Pxn_2 to Pbn
+      PTLn = PTLn
+      PPTLn = PPTLn
+grd2: PTLn = PTLn
+      PPTLn = PPTLn
+      SendOverNetwork Userreqn to OPreqn
+
+Tin: (Pbn != null) AND (PI.CanAddCars)
+    AddElement Pbn to PI
+
+Tgn: (PI.HaveCarForMe) AND (Pon.CanAddCars)
+    PopElementWithTargetToQueue PI to Pon
+
+Tgen: (Po1.HaveCar)
+    PopElementWithoutTarget Pon to Poen
+
+Toutn: (Pan != null) AND (Pxn/Pxn_1.CanNotAddCars)
+    SendOverNetwork "full" to OPn
+
+Tsn: (Pxn_1.HaveBus) AND (Pstationn.CanAddCars)
+    PopElementWithoutTargetToQueue Pxn to Pstationn
+
+Tsen: (Pstationn.IsBus) AND (Pxn_2.CanAddCars)
+    PopElementWithoutTargetToQueue Pstationn to Pxn_2
+
