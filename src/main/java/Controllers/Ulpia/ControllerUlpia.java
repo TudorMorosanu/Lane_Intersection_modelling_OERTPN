@@ -265,12 +265,12 @@ public class ControllerUlpia {
 
         GuardMapping grdTf1_1 = new GuardMapping();
         grdTf1_1.condition = Tf1Ct1;
-        grdTf1_1.Activations.add(new Activation(t_f1, "Five", TransitionOperation.DynamicDelay, ""));
+        grdTf1_1.Activations.add(new Activation(t2, "Five", TransitionOperation.DynamicDelay, ""));
         t_f1.GuardMappingList.add(grdTf1_1);
 
         GuardMapping grdTf1_2 = new GuardMapping();
         grdTf1_2.condition = Tf1Ct3;
-        grdTf1_2.Activations.add(new Activation(t_f1, "Ten", TransitionOperation.DynamicDelay, ""));
+        grdTf1_2.Activations.add(new Activation(t2, "Ten", TransitionOperation.DynamicDelay, ""));
         t_f1.GuardMappingList.add(grdTf1_2);
 
         t_f1.Delay = 5;
@@ -294,12 +294,12 @@ public class ControllerUlpia {
 
         GuardMapping grdTf2_1 = new GuardMapping();
         grdTf2_1.condition = Tf2Ct1;
-        grdTf2_1.Activations.add(new Activation(t_f2, "Five", TransitionOperation.DynamicDelay, ""));
+        grdTf2_1.Activations.add(new Activation(t4, "Five", TransitionOperation.DynamicDelay, ""));
         t_f1.GuardMappingList.add(grdTf2_1);
 
         GuardMapping grdTf2_2 = new GuardMapping();
         grdTf2_2.condition = Tf2Ct3;
-        grdTf2_2.Activations.add(new Activation(t_f2, "Ten", TransitionOperation.DynamicDelay, ""));
+        grdTf2_2.Activations.add(new Activation(t4, "Ten", TransitionOperation.DynamicDelay, ""));
         t_f2.GuardMappingList.add(grdTf2_2);
 
         t_f2.Delay = 5;
@@ -323,12 +323,12 @@ public class ControllerUlpia {
 
         GuardMapping grdTf3_1 = new GuardMapping();
         grdTf3_1.condition = Tf3Ct1;
-        grdTf3_1.Activations.add(new Activation(t_f3, "Five", TransitionOperation.DynamicDelay, ""));
+        grdTf3_1.Activations.add(new Activation(t6, "Five", TransitionOperation.DynamicDelay, ""));
         t_f3.GuardMappingList.add(grdTf3_1);
 
         GuardMapping grdTf3_2 = new GuardMapping();
         grdTf3_2.condition = Tf3Ct3;
-        grdTf3_2.Activations.add(new Activation(t_f3, "Ten", TransitionOperation.DynamicDelay, ""));
+        grdTf3_2.Activations.add(new Activation(t6, "Ten", TransitionOperation.DynamicDelay, ""));
         t_f3.GuardMappingList.add(grdTf3_2);
 
         t_f3.Delay = 5;

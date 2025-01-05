@@ -38,25 +38,30 @@ public class MacedonskiIntersection {
         p3.Value = new TransferOperation("localhost", "1082" , "in1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iMac_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataCar p5 = new DataCar();
+        DataString p5 = new DataString();
         p5.SetName("iMac_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iMac_OPreq1");
+        p6.Value = new TransferOperation("localhost", "1091", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
         p7.SetName("iMac_Pb1");
         pn.PlaceList.add(p7);
 
-        DataCar p8 = new DataCar();
+        DataString p8 = new DataString();
         p8.SetName("iMac_PTL1");
         pn.PlaceList.add(p8);
+
+        DataString p22 = new DataString();
+        p22.SetName("iMac_CPTL1");
+        pn.PlaceList.add(p22);
 
         DataCar p9 = new DataCar();
         p9.SetName("iMac_Pa4");
@@ -72,11 +77,11 @@ public class MacedonskiIntersection {
         p11.Value = new TransferOperation("localhost", "1082" , "in2");
         pn.PlaceList.add(p11);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iMac_Usrreq4");
         pn.PlaceList.add(p12);
 
-        DataCar p13 = new DataCar();
+        DataString p13 = new DataString();
         p13.SetName("iMac_PPTL4");
         pn.PlaceList.add(p13);
 
@@ -88,7 +93,7 @@ public class MacedonskiIntersection {
         p15.SetName("iMac_Pb4");
         pn.PlaceList.add(p15);
 
-        DataCar p16 = new DataCar();
+        DataString p16 = new DataString();
         p16.SetName("iMac_PTL4");
         pn.PlaceList.add(p16);
 
@@ -170,7 +175,9 @@ public class MacedonskiIntersection {
         // First guard
         Condition T3Ct1_1 = new Condition(t3, "iMac_Px1", TransitionCondition.HaveCar);
         Condition T3Ct1_2 = new Condition(t3, "iMac_PTL1", TransitionCondition.Equal, "green");
+        Condition T3Ct1_3 = new Condition(t3, "iMac_CPTL1", TransitionCondition.Equal, "green");
         T3Ct1_1.SetNextCondition(LogicConnector.AND, T3Ct1_2);
+        T3Ct1_2.SetNextCondition(LogicConnector.AND, T3Ct1_3);
 
         GuardMapping grdT3_1 = new GuardMapping();
         grdT3_1.condition = T3Ct1_1;
@@ -247,10 +254,12 @@ public class MacedonskiIntersection {
         t6.TransitionName = "iMac_Tge1";
         t6.InputPlaceName.add("iMac_Po1");
 
-        Condition T6Ct1 = new Condition(t6, "iMac_Po1", TransitionCondition.HaveCar);
+        Condition T6Ct1_1 = new Condition(t6, "iMac_Po1", TransitionCondition.HaveCar);
+        Condition T6Ct1_2 = new Condition(t6, "iMac_CPTL1", TransitionCondition.Equal, "green");
+        T6Ct1_1.SetNextCondition(LogicConnector.AND, T6Ct1_2);
 
         GuardMapping grdT6 = new GuardMapping();
-        grdT6.condition = T6Ct1;
+        grdT6.condition = T6Ct1_1;
 
         grdT6.Activations.add(new Activation(t6, "iMac_Po1", TransitionOperation.PopElementWithoutTarget, "iMac_Poe1"));
         t6.GuardMappingList.add(grdT6);

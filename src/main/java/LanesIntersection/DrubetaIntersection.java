@@ -47,25 +47,30 @@ public class DrubetaIntersection {
         p3.Value = new TransferOperation("localhost", "1086" , "in1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iDrub_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataCar p5 = new DataCar();
+        DataString p5 = new DataString();
         p5.SetName("iDrub_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iDrub_OPreq1");
+        p6.Value = new TransferOperation("localhost", "1087", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
         p7.SetName("iDrub_Pb1");
         pn.PlaceList.add(p7);
 
-        DataCar p8 = new DataCar();
+        DataString p8 = new DataString();
         p8.SetName("iDrub_PTL1");
         pn.PlaceList.add(p8);
+
+        DataString p42 = new DataString();
+        p42.SetName("iDrub_CPTL1");
+        pn.PlaceList.add(p42);
 
         DataCar p9 = new DataCar();
         p9.SetName("iDrub_Pa2");
@@ -91,25 +96,30 @@ public class DrubetaIntersection {
         p10.Value = new TransferOperation("localhost", "1086" , "in2");
         pn.PlaceList.add(p10);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iDrub_Usrreq2");
         pn.PlaceList.add(p12);
 
-        DataCar p13 = new DataCar();
+        DataString p13 = new DataString();
         p13.SetName("iDrub_PPTL2");
         pn.PlaceList.add(p13);
 
-        DataCar p14 = new DataCar();
+        DataTransfer p14 = new DataTransfer();
         p14.SetName("iDrub_OPreq2");
+        p14.Value = new TransferOperation("localhost", "1088", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();
         p15.SetName("iDrub_Pb2");
         pn.PlaceList.add(p15);
 
-        DataCar p16 = new DataCar();
+        DataString p16 = new DataString();
         p16.SetName("iDrub_PTL2");
         pn.PlaceList.add(p16);
+
+        DataString p43 = new DataString();
+        p43.SetName("iDrub_CPTL2");
+        pn.PlaceList.add(p43);
 
         DataCar p17 = new DataCar();
         p17.SetName("iDrub_Pa3");
@@ -135,25 +145,30 @@ public class DrubetaIntersection {
         p19.Value = new TransferOperation("localhost", "1086" , "in3");
         pn.PlaceList.add(p19);
 
-        DataCar p20 = new DataCar();
+        DataString p20 = new DataString();
         p20.SetName("iDrub_Usrreq3");
         pn.PlaceList.add(p20);
 
-        DataCar p21 = new DataCar();
+        DataString p21 = new DataString();
         p21.SetName("iDrub_PPTL3");
         pn.PlaceList.add(p21);
 
-        DataCar p22 = new DataCar();
+        DataTransfer p22 = new DataTransfer();
         p22.SetName("iDrub_OPreq3");
+        p22.Value = new TransferOperation("localhost", "1089", "Userreq");
         pn.PlaceList.add(p22);
 
         DataCar p23 = new DataCar();
         p23.SetName("iDrub_Pb3");
         pn.PlaceList.add(p23);
 
-        DataCar p24 = new DataCar();
+        DataString p24 = new DataString();
         p24.SetName("iDrub_PTL3");
         pn.PlaceList.add(p24);
+
+        DataString p44 = new DataString();
+        p44.SetName("iDrub_CPTL3");
+        pn.PlaceList.add(p44);
 
         DataCar p25 = new DataCar();
         p25.SetName("iDrub_Pa4");
@@ -179,25 +194,30 @@ public class DrubetaIntersection {
         p27.Value = new TransferOperation("localhost", "1086" , "in4");
         pn.PlaceList.add(p27);
 
-        DataCar p28 = new DataCar();
+        DataString p28 = new DataString();
         p28.SetName("iDrub_Usrreq4");
         pn.PlaceList.add(p28);
 
-        DataCar p29 = new DataCar();
+        DataString p29 = new DataString();
         p29.SetName("iDrub_PPTL4");
         pn.PlaceList.add(p29);
 
-        DataCar p30 = new DataCar();
+        DataTransfer p30 = new DataTransfer();
         p30.SetName("iDrub_OPreq4");
+        p6.Value = new TransferOperation("localhost", "1090", "Userreq");
         pn.PlaceList.add(p30);
 
         DataCar p31 = new DataCar();
         p31.SetName("iDrub_Pb4");
         pn.PlaceList.add(p31);
 
-        DataCar p32 = new DataCar();
+        DataString p32 = new DataString();
         p32.SetName("iDrub_PTL4");
         pn.PlaceList.add(p32);
+
+        DataString p45 = new DataString();
+        p45.SetName("iDrub_CPTL4");
+        pn.PlaceList.add(p45);
 
         DataCarQueue p33 = new DataCarQueue();
         p33.Value.Size = 10;
@@ -353,7 +373,9 @@ public class DrubetaIntersection {
         // First guard
         Condition T3Ct1_1 = new Condition(t3, "iDrub_Px1_2", TransitionCondition.HaveCar);
         Condition T3Ct1_2 = new Condition(t3, "iDrub_PTL1", TransitionCondition.Equal, "green");
+        Condition T3Ct1_3 = new Condition(t3, "iDrub_CPTL1", TransitionCondition.Equal, "green");
         T3Ct1_1.SetNextCondition(LogicConnector.AND, T3Ct1_2);
+        T3Ct1_2.SetNextCondition(LogicConnector.AND, T3Ct1_3);
 
         GuardMapping grdT3_1 = new GuardMapping();
         grdT3_1.condition = T3Ct1_1;
@@ -441,10 +463,12 @@ public class DrubetaIntersection {
         t6.TransitionName = "iDrub_Tge1";
         t6.InputPlaceName.add("iDrub_Po1");
 
-        Condition T6Ct1 = new Condition(t6, "iDrub_Po1", TransitionCondition.HaveCar);
+        Condition T6Ct1_1 = new Condition(t6, "iDrub_Po1", TransitionCondition.HaveCar);
+        Condition T6Ct1_2 = new Condition(t6, "iDrub_CPTL1", TransitionCondition.Equal, "green");
+        T6Ct1_1.SetNextCondition(LogicConnector.AND, T6Ct1_2);
 
         GuardMapping grdT6 = new GuardMapping();
-        grdT6.condition = T6Ct1;
+        grdT6.condition = T6Ct1_1;
 
         grdT6.Activations.add(new Activation(t6, "iDrub_Po1", TransitionOperation.PopElementWithoutTarget, "iDrub_Poe1"));
         t6.GuardMappingList.add(grdT6);
@@ -568,7 +592,9 @@ public class DrubetaIntersection {
         // First guard
         Condition T9Ct1_1 = new Condition(t9, "iDrub_Px2_2", TransitionCondition.HaveCar);
         Condition T9Ct1_2 = new Condition(t9, "iDrub_PTL2", TransitionCondition.Equal, "green");
+        Condition T9Ct1_3 = new Condition(t9, "iDrub_CPTL2", TransitionCondition.Equal, "green");
         T9Ct1_1.SetNextCondition(LogicConnector.AND, T9Ct1_2);
+        T9Ct1_2.SetNextCondition(LogicConnector.AND, T9Ct1_3);
 
         GuardMapping grdT9_1 = new GuardMapping();
         grdT9_1.condition = T9Ct1_1;
@@ -653,10 +679,12 @@ public class DrubetaIntersection {
         t12.TransitionName = "iDrub_Tge2";
         t12.InputPlaceName.add("iDrub_Po2");
 
-        Condition T12Ct1 = new Condition(t12, "iDrub_Po2", TransitionCondition.HaveCar);
+        Condition T12Ct1_1 = new Condition(t12, "iDrub_Po2", TransitionCondition.HaveCar);
+        Condition T12Ct1_2 = new Condition(t12, "iDrub_CPTL2", TransitionCondition.Equal, "green");
+        T12Ct1_1.SetNextCondition(LogicConnector.AND, T12Ct1_2);
 
         GuardMapping grdT12 = new GuardMapping();
-        grdT12.condition = T12Ct1;
+        grdT12.condition = T12Ct1_1;
 
         grdT12.Activations.add(new Activation(t12, "iDrub_Po2", TransitionOperation.PopElementWithoutTarget, "iUlb_Pa4"));
         t12.GuardMappingList.add(grdT12);
@@ -779,7 +807,9 @@ public class DrubetaIntersection {
         // First guard
         Condition T15Ct1_1 = new Condition(t15, "iDrub_Px3_2", TransitionCondition.HaveCar);
         Condition T15Ct1_2 = new Condition(t15, "iDrub_PTL3", TransitionCondition.Equal, "green");
+        Condition T15Ct1_3 = new Condition(t15, "iDrub_CPTL3", TransitionCondition.Equal, "green");
         T15Ct1_1.SetNextCondition(LogicConnector.AND, T15Ct1_2);
+        T15Ct1_2.SetNextCondition(LogicConnector.AND, T15Ct1_3);
 
         GuardMapping grdT15_1 = new GuardMapping();
         grdT15_1.condition = T15Ct1_1;
@@ -864,10 +894,12 @@ public class DrubetaIntersection {
         t18.TransitionName = "iDrub_Tge3";
         t18.InputPlaceName.add("iDrub_Po3");
 
-        Condition T18Ct1 = new Condition(t18, "iDrub_Po3", TransitionCondition.HaveCar);
+        Condition T18Ct1_1 = new Condition(t18, "iDrub_Po3", TransitionCondition.HaveCar);
+        Condition T18Ct1_2 = new Condition(t18, "iDrub_CPTL3", TransitionCondition.Equal, "green");
+        T18Ct1_1.SetNextCondition(LogicConnector.AND, T18Ct1_2);
 
         GuardMapping grdT18 = new GuardMapping();
-        grdT18.condition = T18Ct1;
+        grdT18.condition = T18Ct1_1;
 
         grdT18.Activations.add(new Activation(t18, "iDrub_Po3", TransitionOperation.PopElementWithoutTarget, "iDrub_Poe3"));
         t18.GuardMappingList.add(grdT18);
@@ -990,7 +1022,9 @@ public class DrubetaIntersection {
         // First guard
         Condition T21Ct1_1 = new Condition(t21, "iDrub_Px4_2", TransitionCondition.HaveCar);
         Condition T21Ct1_2 = new Condition(t21, "iDrub_PTL4", TransitionCondition.Equal, "green");
+        Condition T21Ct1_3 = new Condition(t21, "iDrub_CPTL4", TransitionCondition.Equal, "green");
         T21Ct1_1.SetNextCondition(LogicConnector.AND, T21Ct1_2);
+        T21Ct1_2.SetNextCondition(LogicConnector.AND, T21Ct1_3);
 
         GuardMapping grdT21_1 = new GuardMapping();
         grdT21_1.condition = T21Ct1_1;
@@ -1075,10 +1109,12 @@ public class DrubetaIntersection {
         t24.TransitionName = "iDrub_Tge4";
         t24.InputPlaceName.add("iDrub_Po4");
 
-        Condition T24Ct1 = new Condition(t24, "iDrub_Po4", TransitionCondition.HaveCar);
+        Condition T24Ct1_1 = new Condition(t24, "iDrub_Po4", TransitionCondition.HaveCar);
+        Condition T24Ct1_2 = new Condition(t24, "iDrub_CPTL4", TransitionCondition.Equal, "green");
+        T24Ct1_1.SetNextCondition(LogicConnector.AND, T24Ct1_2);
 
         GuardMapping grdT24 = new GuardMapping();
-        grdT24.condition = T24Ct1;
+        grdT24.condition = T24Ct1_1;
 
         grdT24.Activations.add(new Activation(t24, "iDrub_Po4", TransitionOperation.PopElementWithoutTarget, "iDrub_Poe4"));
         t24.GuardMappingList.add(grdT24);

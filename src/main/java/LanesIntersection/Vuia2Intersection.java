@@ -37,25 +37,30 @@ public class Vuia2Intersection {
         p3.Value = new TransferOperation("localhost", "1084" , "in1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iVuia_Usrreq2");
         pn.PlaceList.add(p4);
 
-        DataCar p5 = new DataCar();
+        DataString p5 = new DataString();
         p5.SetName("iVuia_PPTL2");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iVuia_OPreq2");
+        p6.Value = new TransferOperation("localhost", "1100", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
         p7.SetName("iVuia_Pb2");
         pn.PlaceList.add(p7);
 
-        DataCar p8 = new DataCar();
+        DataString p8 = new DataString();
         p8.SetName("iVuia_PTL2");
         pn.PlaceList.add(p8);
+
+        DataString p22 = new DataString();
+        p22.SetName("iVuia_CPTL2");
+        pn.PlaceList.add(p22);
 
         DataCar p9 = new DataCar();
         p9.SetName("iVuia_Pa3");
@@ -71,25 +76,30 @@ public class Vuia2Intersection {
         p11.Value = new TransferOperation("localhost", "1084" , "in2");
         pn.PlaceList.add(p11);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iVuia_Usrreq3");
         pn.PlaceList.add(p12);
 
-        DataCar p13 = new DataCar();
+        DataString p13 = new DataString();
         p13.SetName("iVuia_PPTL3");
         pn.PlaceList.add(p13);
 
-        DataCar p14 = new DataCar();
+        DataTransfer p14 = new DataTransfer();
         p14.SetName("iVuia_OPreq3");
+        p14.Value = new TransferOperation("localhost", "1101", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();
         p15.SetName("iVuia_Pb3");
         pn.PlaceList.add(p15);
 
-        DataCar p16 = new DataCar();
+        DataString p16 = new DataString();
         p16.SetName("iVuia_PTL3");
         pn.PlaceList.add(p16);
+
+        DataString p23 = new DataString();
+        p23.SetName("iVuia_CPTL3");
+        pn.PlaceList.add(p23);
 
         DataCarQueue p17 = new DataCarQueue();
         p17.Value.Size = 10;
@@ -160,7 +170,9 @@ public class Vuia2Intersection {
         // First guard
         Condition T3Ct1_1 = new Condition(t3, "iVuia_Px2", TransitionCondition.HaveCar);
         Condition T3Ct1_2 = new Condition(t3, "iVuia_PTL2", TransitionCondition.Equal, "green");
+        Condition T3Ct1_3 = new Condition(t3, "iVuia_CPTL2", TransitionCondition.Equal, "green");
         T3Ct1_1.SetNextCondition(LogicConnector.AND, T3Ct1_2);
+        T3Ct1_2.SetNextCondition(LogicConnector.AND, T3Ct1_3);
 
         GuardMapping grdT3_1 = new GuardMapping();
         grdT3_1.condition = T3Ct1_1;
@@ -248,10 +260,12 @@ public class Vuia2Intersection {
         t6.TransitionName = "iVuia_Tge4";
         t6.InputPlaceName.add("iVuia_Po4");
 
-        Condition T6Ct1 = new Condition(t6, "iVuia_Po4", TransitionCondition.HaveCar);
+        Condition T6Ct1_1 = new Condition(t6, "iVuia_Po4", TransitionCondition.HaveCar);
+        Condition T6Ct1_2 = new Condition(t6, "iVuia_CPTL4", TransitionCondition.Equal, "green");
+        T6Ct1_1.SetNextCondition(LogicConnector.AND, T6Ct1_2);
 
         GuardMapping grdT6 = new GuardMapping();
-        grdT6.condition = T6Ct1;
+        grdT6.condition = T6Ct1_1;
 
         grdT6.Activations.add(new Activation(t6, "iVuia_Po4", TransitionOperation.PopElementWithoutTarget, "iUlp_Pa2"));
         t6.GuardMappingList.add(grdT6);
@@ -316,7 +330,9 @@ public class Vuia2Intersection {
         // First guard
         Condition T9Ct1_1 = new Condition(t9, "iVuia_Px3", TransitionCondition.HaveCar);
         Condition T9Ct1_2 = new Condition(t9, "iVuia_PTL3", TransitionCondition.Equal, "green");
+        Condition T9Ct1_3 = new Condition(t9, "iVuia_CPTL3", TransitionCondition.Equal, "green");
         T9Ct1_1.SetNextCondition(LogicConnector.AND, T9Ct1_2);
+        T9Ct1_2.SetNextCondition(LogicConnector.AND, T9Ct1_3);
 
         GuardMapping grdT9_1 = new GuardMapping();
         grdT9_1.condition = T9Ct1_1;
