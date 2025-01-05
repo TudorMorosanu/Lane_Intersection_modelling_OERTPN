@@ -50,7 +50,7 @@ public class InputCar extends JFrame {
 	 */
 	public InputCar() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 318, 400);
+		setBounds(100, 100, 3000, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -75,7 +75,7 @@ public class InputCar extends JFrame {
 		JTextPane txtTarget = new JTextPane();
 		txtTarget.setToolTipText("");
 		txtTarget.setText("target");
-		txtTarget.setBounds(10, 123, 285, 20);
+		txtTarget.setBounds(10, 123, 2850, 20);
 		contentPane.add(txtTarget);
 
 		JTextPane txtPlace = new JTextPane();
