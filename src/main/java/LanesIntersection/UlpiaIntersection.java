@@ -32,8 +32,9 @@ public class UlpiaIntersection {
         p2.SetName("iUlp_Px1");
         pn.PlaceList.add(p2);
 
-        DataCar p3 = new DataCar();
+        DataTransfer p3 = new DataTransfer();
         p3.SetName("iUlp_OP1");
+        p3.Value = new TransferOperation("localhost", "1085" , "in1");
         pn.PlaceList.add(p3);
 
         DataString p4 = new DataString();
@@ -70,8 +71,9 @@ public class UlpiaIntersection {
         p10.SetName("iUlp_Px2");
         pn.PlaceList.add(p10);
 
-        DataCar p11 = new DataCar();
+        DataTransfer p11 = new DataTransfer();
         p11.SetName("iUlp_OP2");
+        p11.Value = new TransferOperation("localhost", "1085" , "in2");
         pn.PlaceList.add(p11);
 
         DataString p12 = new DataString();
@@ -108,8 +110,9 @@ public class UlpiaIntersection {
         p18.SetName("iUlp_Px4");
         pn.PlaceList.add(p18);
 
-        DataCar p19 = new DataCar();
+        DataTransfer p19 = new DataTransfer();
         p19.SetName("iUlp_OP4");
+        p19.Value = new TransferOperation("localhost", "1085" , "in3");
         pn.PlaceList.add(p19);
 
         DataString p20 = new DataString();
@@ -197,6 +200,7 @@ public class UlpiaIntersection {
         grdT2.Activations.add(new Activation(t2, "full", TransitionOperation.SendOverNetwork, "iUlp_OP1"));
         t2.GuardMappingList.add(grdT2);
         t2.Delay = 0;
+        t2.IsAsync = true;
         pn.Transitions.add(t2);
 
     }
@@ -313,6 +317,7 @@ public class UlpiaIntersection {
         grdt6.Activations.add(new Activation(t6, "full", TransitionOperation.SendOverNetwork, "iUlp_OP2"));
         t6.GuardMappingList.add(grdt6);
         t6.Delay = 0;
+        t6.IsAsync = true;
         pn.Transitions.add(t6);
     }
 
@@ -507,6 +512,7 @@ public class UlpiaIntersection {
         grdT14.Activations.add(new Activation(t14, "full", TransitionOperation.SendOverNetwork, "iUlp_OP4"));
         t14.GuardMappingList.add(grdT14);
         t14.Delay = 0;
+        t14.IsAsync = true;
         pn.Transitions.add(t14);
     }
 

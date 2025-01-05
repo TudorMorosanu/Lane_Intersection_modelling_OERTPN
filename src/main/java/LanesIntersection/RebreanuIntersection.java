@@ -27,13 +27,24 @@ public class RebreanuIntersection {
         p1.SetName("iRbr_Pa1");
         pn.PlaceList.add(p1);
 
-        DataCarQueue p2 = new DataCarQueue();
-        p2.Value.Size = 10;
-        p2.SetName("iRbr_Px1");
-        pn.PlaceList.add(p2);
+        DataCarQueue px1_1 = new DataCarQueue();
+        px1_1.Value.Size = 10;
+        px1_1.SetName("iRbr_Px1_1");
+        pn.PlaceList.add(px1_1);
 
-        DataCar p3 = new DataCar();
+        DataCarQueue px1_2 = new DataCarQueue();
+        px1_2.Value.Size = 10;
+        px1_2.SetName("iRbr_Px1_2");
+        pn.PlaceList.add(px1_2);
+
+        DataCarQueue p_station1 = new DataCarQueue();
+        p_station1.Value.Size = 10;
+        p_station1.SetName("iRbr_Pstation1");
+        pn.PlaceList.add(p_station1);
+
+        DataTransfer p3 = new DataTransfer();
         p3.SetName("iRbr_OP1");
+        p3.Value = new TransferOperation("localhost", "1081" , "in1");
         pn.PlaceList.add(p3);
 
         DataString p4 = new DataString();
@@ -65,14 +76,25 @@ public class RebreanuIntersection {
         p9.SetName("iRbr_Pa2");
         pn.PlaceList.add(p9);
 
-        DataCarQueue p10 = new DataCarQueue();
-        p10.Value.Size = 10;
-        p10.SetName("iRbr_Px2");
-        pn.PlaceList.add(p10);
+        DataCarQueue px2_1 = new DataCarQueue();
+        px2_1.Value.Size = 10;
+        px2_1.SetName("iRbr_Px2_1");
+        pn.PlaceList.add(px2_1);
 
-        DataCar p11 = new DataCar();
-        p11.SetName("iRbr_OP2");
-        pn.PlaceList.add(p11);
+        DataCarQueue px2_2 = new DataCarQueue();
+        px2_2.Value.Size = 10;
+        px2_2.SetName("iRbr_Px2_2");
+        pn.PlaceList.add(px2_2);
+
+        DataCarQueue p_station2 = new DataCarQueue();
+        p_station2.Value.Size = 10;
+        p_station2.SetName("iRbr_Pstation2");
+        pn.PlaceList.add(p_station2);
+
+        DataTransfer p10 = new DataTransfer();
+        p10.SetName("iRbr_OP2");
+        p10.Value = new TransferOperation("localhost", "1081" , "in2");
+        pn.PlaceList.add(p10);
 
         DataString p12 = new DataString();
         p12.SetName("iRbr_Usrreq2");
@@ -103,13 +125,24 @@ public class RebreanuIntersection {
         p17.SetName("iRbr_Pa3");
         pn.PlaceList.add(p17);
 
-        DataCarQueue p18 = new DataCarQueue();
-        p18.Value.Size = 10;
-        p18.SetName("iRbr_Px3");
-        pn.PlaceList.add(p18);
+        DataCarQueue px3_1 = new DataCarQueue();
+        px3_1.Value.Size = 10;
+        px3_1.SetName("iRbr_Px3_1");
+        pn.PlaceList.add(px3_1);
 
-        DataCar p19 = new DataCar();
+        DataCarQueue px3_2 = new DataCarQueue();
+        px3_2.Value.Size = 10;
+        px3_2.SetName("iRbr_Px3_2");
+        pn.PlaceList.add(px3_2);
+
+        DataCarQueue p_station3 = new DataCarQueue();
+        p_station3.Value.Size = 10;
+        p_station3.SetName("iRbr_Pstation3");
+        pn.PlaceList.add(p_station3);
+
+        DataTransfer p19 = new DataTransfer();
         p19.SetName("iRbr_OP3");
+        p19.Value = new TransferOperation("localhost", "1081" , "in3");
         pn.PlaceList.add(p19);
 
         DataString p20 = new DataString();
@@ -141,13 +174,24 @@ public class RebreanuIntersection {
         p25.SetName("iRbr_Pa4");
         pn.PlaceList.add(p25);
 
-        DataCarQueue p26 = new DataCarQueue();
-        p26.Value.Size = 10;
-        p26.SetName("iRbr_Px4");
-        pn.PlaceList.add(p26);
+        DataCarQueue px4_1 = new DataCarQueue();
+        px4_1.Value.Size = 10;
+        px4_1.SetName("iRbr_Px4_1");
+        pn.PlaceList.add(px4_1);
 
-        DataCar p27 = new DataCar();
+        DataCarQueue px4_2 = new DataCarQueue();
+        px4_2.Value.Size = 10;
+        px4_2.SetName("iRbr_Px4_2");
+        pn.PlaceList.add(px4_2);
+
+        DataCarQueue p_station4 = new DataCarQueue();
+        p_station4.Value.Size = 10;
+        p_station4.SetName("iRbr_Pstation4");
+        pn.PlaceList.add(p_station4);
+
+        DataTransfer p27 = new DataTransfer();
         p27.SetName("iRbr_OP4");
+        p27.Value = new TransferOperation("localhost", "1081" , "in4");
         pn.PlaceList.add(p27);
 
         DataString p28 = new DataString();
@@ -211,27 +255,87 @@ public class RebreanuIntersection {
         p41.Value.Size = 10;
         p41.SetName("iRbr_PI");
         pn.PlaceList.add(p41);
+
     }
 
     public static void addT1 (PetriNet pn){
 
         // T1 ------------------------------------------------
         PetriTransition t1 = new PetriTransition(pn);
-        t1.TransitionName = "iRbr_Tu1";
+        t1.TransitionName = "iRbr_Tu1_1";
         t1.InputPlaceName.add("iRbr_Pa1");
-        t1.InputPlaceName.add("iRbr_Px1");
+        t1.InputPlaceName.add("iRbr_Px1_1");
 
         Condition T1Ct1 = new Condition(t1, "iRbr_Pa1", TransitionCondition.NotNull);
-        Condition T1Ct2 = new Condition(t1, "iRbr_Px1", TransitionCondition.CanAddCars);
+        Condition T1Ct2 = new Condition(t1, "iRbr_Px1_1", TransitionCondition.CanAddCars);
         T1Ct1.SetNextCondition(LogicConnector.AND, T1Ct2);
 
         GuardMapping grdT1 = new GuardMapping();
         grdT1.condition = T1Ct1;
 
-        grdT1.Activations.add(new Activation(t1, "iRbr_Pa1", TransitionOperation.AddElement, "iRbr_Px1"));
+        grdT1.Activations.add(new Activation(t1, "iRbr_Pa1", TransitionOperation.AddElement, "iRbr_Px1_1"));
         t1.GuardMappingList.add(grdT1);
         t1.Delay = 0;
         pn.Transitions.add(t1);
+    }
+
+    public static void addTu1_2 (PetriNet pn){
+
+        // Tu1_2 ------------------------------------------------
+        PetriTransition tu1_2 = new PetriTransition(pn);
+        tu1_2.TransitionName = "iRbr_Tu1_2";
+        tu1_2.InputPlaceName.add("iRbr_Px1_1");
+        tu1_2.InputPlaceName.add("iRbr_Px1_2");
+
+        Condition Tu1_2Ct1 = new Condition(tu1_2, "iRbr_Px1_1", TransitionCondition.HaveCarForMe);
+        Condition Tu1_2Ct2 = new Condition(tu1_2, "iRbr_Px1_2", TransitionCondition.CanAddCars);
+        Tu1_2Ct1.SetNextCondition(LogicConnector.AND, Tu1_2Ct2);
+
+        GuardMapping grdTu1_2 = new GuardMapping();
+        grdTu1_2.condition = Tu1_2Ct1;
+
+        grdTu1_2.Activations.add(new Activation(tu1_2, "iRbr_Px1_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Px1_2"));
+        tu1_2.GuardMappingList.add(grdTu1_2);
+        tu1_2.Delay = 0;
+        pn.Transitions.add(tu1_2);
+    }
+
+    public static void addTs1 (PetriNet pn){
+
+        // Ts1 ------------------------------------------------
+        PetriTransition ts1 = new PetriTransition(pn);
+        ts1.TransitionName = "iRbr_Ts1";
+        ts1.InputPlaceName.add("iRbr_Px1_1");
+
+        Condition Ts1Ct1 = new Condition(ts1, "iRbr_Px1_1", TransitionCondition.HaveCarForMe);
+        Condition Ts1Ct2 = new Condition(ts1, "iRbr_Px1_1", TransitionCondition.HaveBus);
+        Ts1Ct1.SetNextCondition(LogicConnector.AND, Ts1Ct2);
+
+        GuardMapping grdTs1 = new GuardMapping();
+        grdTs1.condition = Ts1Ct1;
+
+        grdTs1.Activations.add(new Activation(ts1, "iRbr_Px1_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Pstation1"));
+        ts1.GuardMappingList.add(grdTs1);
+        ts1.Delay = 0;
+        pn.Transitions.add(ts1);
+    }
+
+    public static void addTes1 (PetriNet pn){
+
+        // Tes1 ------------------------------------------------
+        PetriTransition tes1 = new PetriTransition(pn);
+        tes1.TransitionName = "iRbr_Tes1";
+        tes1.InputPlaceName.add("iRbr_Pstation1");
+
+        Condition Tes1Ct1 = new Condition(tes1, "iRbr_Pstation1", TransitionCondition.HaveCar);
+
+        GuardMapping grdTes1 = new GuardMapping();
+        grdTes1.condition = Tes1Ct1;
+
+        grdTes1.Activations.add(new Activation(tes1, "iRbr_Pstation1", TransitionOperation.PopElementWithoutTargetToQueue, "iRbr_Px1_2"));
+        tes1.GuardMappingList.add(grdTes1);
+        tes1.Delay = 5;
+        pn.Transitions.add(tes1);
     }
 
     public static void addT2 (PetriNet pn){
@@ -240,10 +344,10 @@ public class RebreanuIntersection {
         PetriTransition t2 = new PetriTransition(pn);
         t2.TransitionName = "iRbr_Tout1";
         t2.InputPlaceName.add("iRbr_Pa1");
-        t2.InputPlaceName.add("iRbr_Px1");
+        t2.InputPlaceName.add("iRbr_Px1_2");
 
         Condition T2Ct1 = new Condition(t2, "iRbr_Pa1", TransitionCondition.NotNull);
-        Condition T2Ct2 = new Condition(t2, "iRbr_Px1", TransitionCondition.CanNotAddCars);
+        Condition T2Ct2 = new Condition(t2, "iRbr_Px1_2", TransitionCondition.CanNotAddCars);
         T2Ct1.SetNextCondition(LogicConnector.AND, T2Ct2);
 
         GuardMapping grdT2 = new GuardMapping();
@@ -252,8 +356,8 @@ public class RebreanuIntersection {
         grdT2.Activations.add(new Activation(t2, "full", TransitionOperation.SendOverNetwork, "iRbr_OP1"));
         t2.GuardMappingList.add(grdT2);
         t2.Delay = 0;
+        t2.IsAsync = true;
         pn.Transitions.add(t2);
-
     }
 
     public static void addT3 (PetriNet pn){
@@ -261,13 +365,13 @@ public class RebreanuIntersection {
         // T3 ------------------------------------------------
         PetriTransition t3 = new PetriTransition(pn);
         t3.TransitionName = "iRbr_Te1";
-        t3.InputPlaceName.add("iRbr_Px1");
+        t3.InputPlaceName.add("iRbr_Px1_2");
         t3.InputPlaceName.add("iRbr_Usrreq1");
         t3.InputPlaceName.add("iRbr_PPTL1");
         t3.InputPlaceName.add("iRbr_PTL1");
 
         // First guard
-        Condition T3Ct1_1 = new Condition(t3, "iRbr_Px1", TransitionCondition.HaveCar);
+        Condition T3Ct1_1 = new Condition(t3, "iRbr_Px1_2", TransitionCondition.HaveCar);
         Condition T3Ct1_2 = new Condition(t3, "iRbr_PTL1", TransitionCondition.Equal, "green");
         Condition T3Ct1_3 = new Condition(t3, "iRbr_CPTL1", TransitionCondition.Equal, "green");
         T3Ct1_1.SetNextCondition(LogicConnector.AND, T3Ct1_2);
@@ -276,7 +380,7 @@ public class RebreanuIntersection {
         GuardMapping grdT3_1 = new GuardMapping();
         grdT3_1.condition = T3Ct1_1;
 
-        grdT3_1.Activations.add(new Activation(t3, "iRbr_Px1", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb1"));
+        grdT3_1.Activations.add(new Activation(t3, "iRbr_Px1_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb1"));
         grdT3_1.Activations.add(new Activation(t3, "iRbr_PPTL1", TransitionOperation.Move, "iRbr_PPTL1"));
         grdT3_1.Activations.add(new Activation(t3, "iRbr_PTL1", TransitionOperation.Move, "iRbr_PTL1"));
         t3.GuardMappingList.add(grdT3_1);
@@ -293,12 +397,12 @@ public class RebreanuIntersection {
         t3.GuardMappingList.add(grdT3_2);
 
         // Third guard
-        Condition T3Ct3_1 = new Condition(t3, "iRbr_Px1", TransitionCondition.HavePriorityCar);
+        Condition T3Ct3_1 = new Condition(t3, "iRbr_Px1_2", TransitionCondition.HavePriorityCar);
 
         GuardMapping grdT3_3 = new GuardMapping();
         grdT3_3.condition = T3Ct3_1;
 
-        grdT3_3.Activations.add(new Activation(t3, "iRbr_Px1", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb1"));
+        grdT3_3.Activations.add(new Activation(t3, "iRbr_Px1_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb1"));
         grdT3_3.Activations.add(new Activation(t3, "iRbr_PPTL1", TransitionOperation.Move, "iRbr_PPTL1"));
         grdT3_3.Activations.add(new Activation(t3, "iRbr_PTL1", TransitionOperation.Move, "iRbr_PTL1"));
         t3.GuardMappingList.add(grdT3_3);
@@ -377,21 +481,80 @@ public class RebreanuIntersection {
 
         // T7 ------------------------------------------------
         PetriTransition t7 = new PetriTransition(pn);
-        t7.TransitionName = "iRbr_Tu2";
+        t7.TransitionName = "iRbr_Tu2_1";
         t7.InputPlaceName.add("iRbr_Pa2");
-        t7.InputPlaceName.add("iRbr_Px2");
+        t7.InputPlaceName.add("iRbr_Px2_1");
 
         Condition T7Ct1 = new Condition(t7, "iRbr_Pa2", TransitionCondition.NotNull);
-        Condition T7Ct2 = new Condition(t7, "iRbr_Px2", TransitionCondition.CanAddCars);
+        Condition T7Ct2 = new Condition(t7, "iRbr_Px2_1", TransitionCondition.CanAddCars);
         T7Ct1.SetNextCondition(LogicConnector.AND, T7Ct2);
 
         GuardMapping grdT7 = new GuardMapping();
         grdT7.condition = T7Ct1;
 
-        grdT7.Activations.add(new Activation(t7, "iRbr_Pa2", TransitionOperation.AddElement, "iRbr_Px2"));
+        grdT7.Activations.add(new Activation(t7, "iRbr_Pa2", TransitionOperation.AddElement, "iRbr_Px2_1"));
         t7.GuardMappingList.add(grdT7);
         t7.Delay = 0;
         pn.Transitions.add(t7);
+    }
+
+    public static void addTu2_2 (PetriNet pn){
+
+        // Tu2_2 ------------------------------------------------
+        PetriTransition tu2_2 = new PetriTransition(pn);
+        tu2_2.TransitionName = "iRbr_Tu2_2";
+        tu2_2.InputPlaceName.add("iRbr_Px2_1");
+        tu2_2.InputPlaceName.add("iRbr_Px2_2");
+
+        Condition Tu2_2Ct1 = new Condition(tu2_2, "iRbr_Px2_1", TransitionCondition.HaveCarForMe);
+        Condition Tu2_2Ct2 = new Condition(tu2_2, "iRbr_Px2_2", TransitionCondition.CanAddCars);
+        Tu2_2Ct1.SetNextCondition(LogicConnector.AND, Tu2_2Ct2);
+
+        GuardMapping grdTu2_2 = new GuardMapping();
+        grdTu2_2.condition = Tu2_2Ct1;
+
+        grdTu2_2.Activations.add(new Activation(tu2_2, "iRbr_Px2_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Px2_2"));
+        tu2_2.GuardMappingList.add(grdTu2_2);
+        tu2_2.Delay = 0;
+        pn.Transitions.add(tu2_2);
+    }
+
+    public static void addTs2 (PetriNet pn){
+
+        // Ts2 ------------------------------------------------
+        PetriTransition ts2 = new PetriTransition(pn);
+        ts2.TransitionName = "iRbr_Ts2";
+        ts2.InputPlaceName.add("iRbr_Px2_1");
+
+        Condition Ts2Ct1 = new Condition(ts2, "iRbr_Px2_1", TransitionCondition.HaveCarForMe);
+        Condition Ts2Ct2 = new Condition(ts2, "iRbr_Px2_1", TransitionCondition.HaveBus);
+        Ts2Ct1.SetNextCondition(LogicConnector.AND, Ts2Ct2);
+
+        GuardMapping grdTs2 = new GuardMapping();
+        grdTs2.condition = Ts2Ct1;
+
+        grdTs2.Activations.add(new Activation(ts2, "iRbr_Px2_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Pstation2"));
+        ts2.GuardMappingList.add(grdTs2);
+        ts2.Delay = 0;
+        pn.Transitions.add(ts2);
+    }
+
+    public static void addTes2 (PetriNet pn){
+
+        // Tes2 ------------------------------------------------
+        PetriTransition tes2 = new PetriTransition(pn);
+        tes2.TransitionName = "iRbr_Tes2";
+        tes2.InputPlaceName.add("iRbr_Pstation2");
+
+        Condition Tes2Ct1 = new Condition(tes2, "iRbr_Pstation2", TransitionCondition.HaveCar);
+
+        GuardMapping grdTes2 = new GuardMapping();
+        grdTes2.condition = Tes2Ct1;
+
+        grdTes2.Activations.add(new Activation(tes2, "iRbr_Pstation2", TransitionOperation.PopElementWithoutTargetToQueue, "iRbr_Px2_2"));
+        tes2.GuardMappingList.add(grdTes2);
+        tes2.Delay = 5;
+        pn.Transitions.add(tes2);
     }
 
     public static void addT8 (PetriNet pn){
@@ -400,10 +563,10 @@ public class RebreanuIntersection {
         PetriTransition t8 = new PetriTransition(pn);
         t8.TransitionName = "iRbr_Tout2";
         t8.InputPlaceName.add("iRbr_Pa2");
-        t8.InputPlaceName.add("iRbr_Px2");
+        t8.InputPlaceName.add("iRbr_Px2_2");
 
         Condition T8Ct1 = new Condition(t8, "iRbr_Pa2", TransitionCondition.NotNull);
-        Condition T8Ct2 = new Condition(t8, "iRbr_Px2", TransitionCondition.CanNotAddCars);
+        Condition T8Ct2 = new Condition(t8, "iRbr_Px2_2", TransitionCondition.CanNotAddCars);
         T8Ct1.SetNextCondition(LogicConnector.AND, T8Ct2);
 
         GuardMapping grdT8 = new GuardMapping();
@@ -412,6 +575,7 @@ public class RebreanuIntersection {
         grdT8.Activations.add(new Activation(t8, "full", TransitionOperation.SendOverNetwork, "iRbr_OP2"));
         t8.GuardMappingList.add(grdT8);
         t8.Delay = 0;
+        t8.IsAsync = true;
         pn.Transitions.add(t8);
     }
 
@@ -420,13 +584,13 @@ public class RebreanuIntersection {
         // T9 ------------------------------------------------
         PetriTransition t9 = new PetriTransition(pn);
         t9.TransitionName = "iRbr_Te2";
-        t9.InputPlaceName.add("iRbr_Px2");
+        t9.InputPlaceName.add("iRbr_Px2_2");
         t9.InputPlaceName.add("iRbr_Usrreq2");
         t9.InputPlaceName.add("iRbr_PPTL2");
         t9.InputPlaceName.add("iRbr_PTL2");
 
         // First guard
-        Condition T9Ct1_1 = new Condition(t9, "iRbr_Px2", TransitionCondition.HaveCar);
+        Condition T9Ct1_1 = new Condition(t9, "iRbr_Px2_2", TransitionCondition.HaveCar);
         Condition T9Ct1_2 = new Condition(t9, "iRbr_PTL2", TransitionCondition.Equal, "green");
         Condition T9Ct1_3 = new Condition(t9, "iRbr_CPTL2", TransitionCondition.Equal, "green");
         T9Ct1_1.SetNextCondition(LogicConnector.AND, T9Ct1_2);
@@ -435,7 +599,7 @@ public class RebreanuIntersection {
         GuardMapping grdT9_1 = new GuardMapping();
         grdT9_1.condition = T9Ct1_1;
 
-        grdT9_1.Activations.add(new Activation(t9, "iRbr_Px2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb2"));
+        grdT9_1.Activations.add(new Activation(t9, "iRbr_Px2_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb2"));
         grdT9_1.Activations.add(new Activation(t9, "iRbr_PPTL2", TransitionOperation.Move, "iRbr_PPTL2"));
         grdT9_1.Activations.add(new Activation(t9, "iRbr_PTL2", TransitionOperation.Move, "iRbr_PTL2"));
         t9.GuardMappingList.add(grdT9_1);
@@ -452,12 +616,12 @@ public class RebreanuIntersection {
         t9.GuardMappingList.add(grdT9_2);
 
         // Third guard
-        Condition T9Ct3_1 = new Condition(t9, "iRbr_Px2", TransitionCondition.HavePriorityCar);
+        Condition T9Ct3_1 = new Condition(t9, "iRbr_Px2_2", TransitionCondition.HavePriorityCar);
 
         GuardMapping grdT9_3 = new GuardMapping();
         grdT9_3.condition = T9Ct3_1;
 
-        grdT9_3.Activations.add(new Activation(t9, "iRbr_Px2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb2"));
+        grdT9_3.Activations.add(new Activation(t9, "iRbr_Px2_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb2"));
         grdT9_3.Activations.add(new Activation(t9, "iRbr_PPTL2", TransitionOperation.Move, "iRbr_PPTL2"));
         grdT9_3.Activations.add(new Activation(t9, "iRbr_PTL2", TransitionOperation.Move, "iRbr_PTL2"));
         t9.GuardMappingList.add(grdT9_3);
@@ -532,21 +696,80 @@ public class RebreanuIntersection {
 
         // T13 ------------------------------------------------
         PetriTransition t13 = new PetriTransition(pn);
-        t13.TransitionName = "iRbr_Tu3";
+        t13.TransitionName = "iRbr_Tu3_1";
         t13.InputPlaceName.add("iRbr_Pa3");
-        t13.InputPlaceName.add("iRbr_Px3");
+        t13.InputPlaceName.add("iRbr_Px3_1");
 
         Condition T13Ct1 = new Condition(t13, "iRbr_Pa3", TransitionCondition.NotNull);
-        Condition T13Ct2 = new Condition(t13, "iRbr_Px3", TransitionCondition.CanAddCars);
+        Condition T13Ct2 = new Condition(t13, "iRbr_Px3_1", TransitionCondition.CanAddCars);
         T13Ct1.SetNextCondition(LogicConnector.AND, T13Ct2);
 
         GuardMapping grdT13 = new GuardMapping();
         grdT13.condition = T13Ct1;
 
-        grdT13.Activations.add(new Activation(t13, "iRbr_Pa3", TransitionOperation.AddElement, "iRbr_Px3"));
+        grdT13.Activations.add(new Activation(t13, "iRbr_Pa3", TransitionOperation.AddElement, "iRbr_Px3_1"));
         t13.GuardMappingList.add(grdT13);
         t13.Delay = 0;
         pn.Transitions.add(t13);
+    }
+
+    public static void addTu3_2 (PetriNet pn){
+
+        // Tu3_2 ------------------------------------------------
+        PetriTransition tu3_2 = new PetriTransition(pn);
+        tu3_2.TransitionName = "iRbr_Tu3_2";
+        tu3_2.InputPlaceName.add("iRbr_Px3_1");
+        tu3_2.InputPlaceName.add("iRbr_Px3_2");
+
+        Condition Tu3_2Ct1 = new Condition(tu3_2, "iRbr_Px3_1", TransitionCondition.HaveCarForMe);
+        Condition Tu3_2Ct2 = new Condition(tu3_2, "iRbr_Px3_2", TransitionCondition.CanAddCars);
+        Tu3_2Ct1.SetNextCondition(LogicConnector.AND, Tu3_2Ct2);
+
+        GuardMapping grdTu3_2 = new GuardMapping();
+        grdTu3_2.condition = Tu3_2Ct1;
+
+        grdTu3_2.Activations.add(new Activation(tu3_2, "iRbr_Px3_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Px3_2"));
+        tu3_2.GuardMappingList.add(grdTu3_2);
+        tu3_2.Delay = 0;
+        pn.Transitions.add(tu3_2);
+    }
+
+    public static void addTs3 (PetriNet pn){
+
+        // Ts3 ------------------------------------------------
+        PetriTransition ts3 = new PetriTransition(pn);
+        ts3.TransitionName = "iRbr_Ts3";
+        ts3.InputPlaceName.add("iRbr_Px3_1");
+
+        Condition Ts3Ct1 = new Condition(ts3, "iRbr_Px3_1", TransitionCondition.HaveCarForMe);
+        Condition Ts3Ct2 = new Condition(ts3, "iRbr_Px3_1", TransitionCondition.HaveBus);
+        Ts3Ct1.SetNextCondition(LogicConnector.AND, Ts3Ct2);
+
+        GuardMapping grdTs3 = new GuardMapping();
+        grdTs3.condition = Ts3Ct1;
+
+        grdTs3.Activations.add(new Activation(ts3, "iRbr_Px3_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Pstation3"));
+        ts3.GuardMappingList.add(grdTs3);
+        ts3.Delay = 0;
+        pn.Transitions.add(ts3);
+    }
+
+    public static void addTes3 (PetriNet pn){
+
+        // Tes3 ------------------------------------------------
+        PetriTransition tes3 = new PetriTransition(pn);
+        tes3.TransitionName = "iRbr_Tes3";
+        tes3.InputPlaceName.add("iRbr_Pstation3");
+
+        Condition Tes3Ct1 = new Condition(tes3, "iRbr_Pstation3", TransitionCondition.HaveCar);
+
+        GuardMapping grdTes3 = new GuardMapping();
+        grdTes3.condition = Tes3Ct1;
+
+        grdTes3.Activations.add(new Activation(tes3, "iRbr_Pstation3", TransitionOperation.PopElementWithoutTargetToQueue, "iRbr_Px3_2"));
+        tes3.GuardMappingList.add(grdTes3);
+        tes3.Delay = 5;
+        pn.Transitions.add(tes3);
     }
 
     public static void addT14 (PetriNet pn){
@@ -555,10 +778,10 @@ public class RebreanuIntersection {
         PetriTransition t14 = new PetriTransition(pn);
         t14.TransitionName = "iRbr_Tout3";
         t14.InputPlaceName.add("iRbr_Pa3");
-        t14.InputPlaceName.add("iRbr_Px3");
+        t14.InputPlaceName.add("iRbr_Px3_2");
 
         Condition T14Ct1 = new Condition(t14, "iRbr_Pa3", TransitionCondition.NotNull);
-        Condition T14Ct2 = new Condition(t14, "iRbr_Px3", TransitionCondition.CanNotAddCars);
+        Condition T14Ct2 = new Condition(t14, "iRbr_Px3_2", TransitionCondition.CanNotAddCars);
         T14Ct1.SetNextCondition(LogicConnector.AND, T14Ct2);
 
         GuardMapping grdT14 = new GuardMapping();
@@ -567,6 +790,7 @@ public class RebreanuIntersection {
         grdT14.Activations.add(new Activation(t14, "full", TransitionOperation.SendOverNetwork, "iRbr_OP3"));
         t14.GuardMappingList.add(grdT14);
         t14.Delay = 0;
+        t14.IsAsync = true;
         pn.Transitions.add(t14);
     }
 
@@ -575,13 +799,13 @@ public class RebreanuIntersection {
         // T15 ------------------------------------------------
         PetriTransition t15 = new PetriTransition(pn);
         t15.TransitionName = "iRbr_Te3";
-        t15.InputPlaceName.add("iRbr_Px3");
+        t15.InputPlaceName.add("iRbr_Px3_2");
         t15.InputPlaceName.add("iRbr_Usrreq3");
         t15.InputPlaceName.add("iRbr_PPTL3");
         t15.InputPlaceName.add("iRbr_PTL3");
 
         // First guard
-        Condition T15Ct1_1 = new Condition(t15, "iRbr_Px3", TransitionCondition.HaveCar);
+        Condition T15Ct1_1 = new Condition(t15, "iRbr_Px3_2", TransitionCondition.HaveCar);
         Condition T15Ct1_2 = new Condition(t15, "iRbr_PTL3", TransitionCondition.Equal, "green");
         Condition T15Ct1_3 = new Condition(t15, "iRbr_CPTL3", TransitionCondition.Equal, "green");
         T15Ct1_1.SetNextCondition(LogicConnector.AND, T15Ct1_2);
@@ -590,7 +814,7 @@ public class RebreanuIntersection {
         GuardMapping grdT15_1 = new GuardMapping();
         grdT15_1.condition = T15Ct1_1;
 
-        grdT15_1.Activations.add(new Activation(t15, "iRbr_Px3", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb3"));
+        grdT15_1.Activations.add(new Activation(t15, "iRbr_Px3_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb3"));
         grdT15_1.Activations.add(new Activation(t15, "iRbr_PPTL3", TransitionOperation.Move, "iRbr_PPTL3"));
         grdT15_1.Activations.add(new Activation(t15, "iRbr_PTL3", TransitionOperation.Move, "iRbr_PTL3"));
         t15.GuardMappingList.add(grdT15_1);
@@ -607,12 +831,12 @@ public class RebreanuIntersection {
         t15.GuardMappingList.add(grdT15_2);
 
         // Third guard
-        Condition T15Ct3_1 = new Condition(t15, "iRbr_Px3", TransitionCondition.HavePriorityCar);
+        Condition T15Ct3_1 = new Condition(t15, "iRbr_Px3_2", TransitionCondition.HavePriorityCar);
 
         GuardMapping grdT15_3 = new GuardMapping();
         grdT15_3.condition = T15Ct3_1;
 
-        grdT15_3.Activations.add(new Activation(t15, "iRbr_Px3", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb3"));
+        grdT15_3.Activations.add(new Activation(t15, "iRbr_Px3_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb3"));
         grdT15_3.Activations.add(new Activation(t15, "iRbr_PPTL3", TransitionOperation.Move, "iRbr_PPTL3"));
         grdT15_3.Activations.add(new Activation(t15, "iRbr_PTL3", TransitionOperation.Move, "iRbr_PTL3"));
         t15.GuardMappingList.add(grdT15_3);
@@ -687,21 +911,80 @@ public class RebreanuIntersection {
 
         // T19 ------------------------------------------------
         PetriTransition t19 = new PetriTransition(pn);
-        t19.TransitionName = "iRbr_Tu4";
+        t19.TransitionName = "iRbr_Tu4_1";
         t19.InputPlaceName.add("iRbr_Pa4");
-        t19.InputPlaceName.add("iRbr_Px4");
+        t19.InputPlaceName.add("iRbr_Px4_1");
 
         Condition T19Ct1 = new Condition(t19, "iRbr_Pa4", TransitionCondition.NotNull);
-        Condition T19Ct2 = new Condition(t19, "iRbr_Px4", TransitionCondition.CanAddCars);
+        Condition T19Ct2 = new Condition(t19, "iRbr_Px4_1", TransitionCondition.CanAddCars);
         T19Ct1.SetNextCondition(LogicConnector.AND, T19Ct2);
 
         GuardMapping grdT19 = new GuardMapping();
         grdT19.condition = T19Ct1;
 
-        grdT19.Activations.add(new Activation(t19, "iRbr_Pa4", TransitionOperation.AddElement, "iRbr_Px4"));
+        grdT19.Activations.add(new Activation(t19, "iRbr_Pa4", TransitionOperation.AddElement, "iRbr_Px4_1"));
         t19.GuardMappingList.add(grdT19);
         t19.Delay = 0;
         pn.Transitions.add(t19);
+    }
+
+    public static void addTu4_2 (PetriNet pn){
+
+        // Tu4_2 ------------------------------------------------
+        PetriTransition tu4_2 = new PetriTransition(pn);
+        tu4_2.TransitionName = "iRbr_Tu4_2";
+        tu4_2.InputPlaceName.add("iRbr_Px4_1");
+        tu4_2.InputPlaceName.add("iRbr_Px4_2");
+
+        Condition Tu4_2Ct1 = new Condition(tu4_2, "iRbr_Px4_1", TransitionCondition.HaveCarForMe);
+        Condition Tu4_2Ct2 = new Condition(tu4_2, "iRbr_Px4_2", TransitionCondition.CanAddCars);
+        Tu4_2Ct1.SetNextCondition(LogicConnector.AND, Tu4_2Ct2);
+
+        GuardMapping grdTu4_2 = new GuardMapping();
+        grdTu4_2.condition = Tu4_2Ct1;
+
+        grdTu4_2.Activations.add(new Activation(tu4_2, "iRbr_Px4_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Px4_2"));
+        tu4_2.GuardMappingList.add(grdTu4_2);
+        tu4_2.Delay = 0;
+        pn.Transitions.add(tu4_2);
+    }
+
+    public static void addTs4 (PetriNet pn){
+
+        // Ts4 ------------------------------------------------
+        PetriTransition ts4 = new PetriTransition(pn);
+        ts4.TransitionName = "iRbr_Ts4";
+        ts4.InputPlaceName.add("iRbr_Px4_1");
+
+        Condition Ts4Ct1 = new Condition(ts4, "iRbr_Px4_1", TransitionCondition.HaveCarForMe);
+        Condition Ts4Ct2 = new Condition(ts4, "iRbr_Px4_1", TransitionCondition.HaveBus);
+        Ts4Ct1.SetNextCondition(LogicConnector.AND, Ts4Ct2);
+
+        GuardMapping grdTs4 = new GuardMapping();
+        grdTs4.condition = Ts4Ct1;
+
+        grdTs4.Activations.add(new Activation(ts4, "iRbr_Px4_1", TransitionOperation.PopElementWithTargetToQueue, "iRbr_Pstation4"));
+        ts4.GuardMappingList.add(grdTs4);
+        ts4.Delay = 0;
+        pn.Transitions.add(ts4);
+    }
+
+    public static void addTes4 (PetriNet pn){
+
+        // Tes4 ------------------------------------------------
+        PetriTransition tes4 = new PetriTransition(pn);
+        tes4.TransitionName = "iRbr_Tes4";
+        tes4.InputPlaceName.add("iRbr_Pstation4");
+
+        Condition Tes4Ct1 = new Condition(tes4, "iRbr_Pstation4", TransitionCondition.HaveCar);
+
+        GuardMapping grdTes4 = new GuardMapping();
+        grdTes4.condition = Tes4Ct1;
+
+        grdTes4.Activations.add(new Activation(tes4, "iRbr_Pstation4", TransitionOperation.PopElementWithoutTargetToQueue, "iRbr_Px4_2"));
+        tes4.GuardMappingList.add(grdTes4);
+        tes4.Delay = 5;
+        pn.Transitions.add(tes4);
     }
 
     public static void addT20 (PetriNet pn){
@@ -710,10 +993,10 @@ public class RebreanuIntersection {
         PetriTransition t20 = new PetriTransition(pn);
         t20.TransitionName = "iRbr_Tout4";
         t20.InputPlaceName.add("iRbr_Pa4");
-        t20.InputPlaceName.add("iRbr_Px4");
+        t20.InputPlaceName.add("iRbr_Px4_2");
 
         Condition T20Ct1 = new Condition(t20, "iRbr_Pa4", TransitionCondition.NotNull);
-        Condition T20Ct2 = new Condition(t20, "iRbr_Px4", TransitionCondition.CanNotAddCars);
+        Condition T20Ct2 = new Condition(t20, "iRbr_Px4_2", TransitionCondition.CanNotAddCars);
         T20Ct1.SetNextCondition(LogicConnector.AND, T20Ct2);
 
         GuardMapping grdT20 = new GuardMapping();
@@ -722,6 +1005,7 @@ public class RebreanuIntersection {
         grdT20.Activations.add(new Activation(t20, "full", TransitionOperation.SendOverNetwork, "iRbr_OP4"));
         t20.GuardMappingList.add(grdT20);
         t20.Delay = 0;
+        t20.IsAsync = true;
         pn.Transitions.add(t20);
     }
 
@@ -730,13 +1014,13 @@ public class RebreanuIntersection {
         // T21 ------------------------------------------------
         PetriTransition t21 = new PetriTransition(pn);
         t21.TransitionName = "iRbr_Te4";
-        t21.InputPlaceName.add("iRbr_Px4");
+        t21.InputPlaceName.add("iRbr_Px4_2");
         t21.InputPlaceName.add("iRbr_Usrreq4");
         t21.InputPlaceName.add("iRbr_PPTL4");
         t21.InputPlaceName.add("iRbr_PTL4");
 
         // First guard
-        Condition T21Ct1_1 = new Condition(t21, "iRbr_Px4", TransitionCondition.HaveCar);
+        Condition T21Ct1_1 = new Condition(t21, "iRbr_Px4_2", TransitionCondition.HaveCar);
         Condition T21Ct1_2 = new Condition(t21, "iRbr_PTL4", TransitionCondition.Equal, "green");
         Condition T21Ct1_3 = new Condition(t21, "iRbr_CPTL4", TransitionCondition.Equal, "green");
         T21Ct1_1.SetNextCondition(LogicConnector.AND, T21Ct1_2);
@@ -745,7 +1029,7 @@ public class RebreanuIntersection {
         GuardMapping grdT21_1 = new GuardMapping();
         grdT21_1.condition = T21Ct1_1;
 
-        grdT21_1.Activations.add(new Activation(t21, "iRbr_Px4", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb4"));
+        grdT21_1.Activations.add(new Activation(t21, "iRbr_Px4_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb4"));
         grdT21_1.Activations.add(new Activation(t21, "iRbr_PPTL4", TransitionOperation.Move, "iRbr_PPTL4"));
         grdT21_1.Activations.add(new Activation(t21, "iRbr_PTL4", TransitionOperation.Move, "iRbr_PTL4"));
         t21.GuardMappingList.add(grdT21_1);
@@ -762,12 +1046,12 @@ public class RebreanuIntersection {
         t21.GuardMappingList.add(grdT21_2);
 
         // Third guard
-        Condition T21Ct3_1 = new Condition(t21, "iRbr_Px4", TransitionCondition.HavePriorityCar);
+        Condition T21Ct3_1 = new Condition(t21, "iRbr_Px4_2", TransitionCondition.HavePriorityCar);
 
         GuardMapping grdT21_3 = new GuardMapping();
         grdT21_3.condition = T21Ct3_1;
 
-        grdT21_3.Activations.add(new Activation(t21, "iRbr_Px4", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb4"));
+        grdT21_3.Activations.add(new Activation(t21, "iRbr_Px4_2", TransitionOperation.PopElementWithoutTarget, "iRbr_Pb4"));
         grdT21_3.Activations.add(new Activation(t21, "iRbr_PPTL4", TransitionOperation.Move, "iRbr_PPTL4"));
         grdT21_3.Activations.add(new Activation(t21, "iRbr_PTL4", TransitionOperation.Move, "iRbr_PTL4"));
         t21.GuardMappingList.add(grdT21_3);
@@ -841,24 +1125,36 @@ public class RebreanuIntersection {
     public static void generatePetriNet (PetriNet pn) {
         addNodes(pn);
         addT1(pn);
+        addTu1_2(pn);
+        addTs1(pn);
+        addTes1(pn);
         addT2(pn);
         addT3(pn);
         addT4(pn);
         addT5(pn);
         addT6(pn);
         addT7(pn);
+        addTu2_2(pn);
+        addTs2(pn);
+        addTes2(pn);
         addT8(pn);
         addT9(pn);
         addT10(pn);
         addT11(pn);
         addT12(pn);
         addT13(pn);
+        addTu3_2(pn);
+        addTs3(pn);
+        addTes3(pn);
         addT14(pn);
         addT15(pn);
         addT16(pn);
         addT17(pn);
         addT18(pn);
         addT19(pn);
+        addTu4_2(pn);
+        addTs4(pn);
+        addTes4(pn);
         addT20(pn);
         addT21(pn);
         addT22(pn);

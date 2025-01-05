@@ -33,8 +33,9 @@ public class MacedonskiIntersection {
         p2.SetName("iMac_Px1");
         pn.PlaceList.add(p2);
 
-        DataCar p3 = new DataCar();
+        DataTransfer p3 = new DataTransfer();
         p3.SetName("iMac_OP1");
+        p3.Value = new TransferOperation("localhost", "1082" , "in1");
         pn.PlaceList.add(p3);
 
         DataString p4 = new DataString();
@@ -71,8 +72,9 @@ public class MacedonskiIntersection {
         p10.SetName("iMac_Px4");
         pn.PlaceList.add(p10);
 
-        DataCar p11 = new DataCar();
+        DataTransfer p11 = new DataTransfer();
         p11.SetName("iMac_OP4");
+        p11.Value = new TransferOperation("localhost", "1082" , "in2");
         pn.PlaceList.add(p11);
 
         DataString p12 = new DataString();
@@ -155,6 +157,7 @@ public class MacedonskiIntersection {
         grdT2.Activations.add(new Activation(t2, "full", TransitionOperation.SendOverNetwork, "iMac_OP1"));
         t2.GuardMappingList.add(grdT2);
         t2.Delay = 0;
+        t2.IsAsync = true;
         pn.Transitions.add(t2);
 
     }
@@ -304,6 +307,7 @@ public class MacedonskiIntersection {
         grdT8.Activations.add(new Activation(t8, "full", TransitionOperation.SendOverNetwork, "iMac_OP4"));
         t8.GuardMappingList.add(grdT8);
         t8.Delay = 0;
+        t8.IsAsync = true;
         pn.Transitions.add(t8);
     }
 
