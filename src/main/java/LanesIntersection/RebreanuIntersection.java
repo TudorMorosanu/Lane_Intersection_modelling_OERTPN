@@ -4,6 +4,8 @@ import Components.*;
 import DataObjects.DataCar;
 import DataObjects.DataCarQueue;
 import DataObjects.DataString;
+import DataObjects.DataTransfer;
+import DataOnly.TransferOperation;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
@@ -34,7 +36,7 @@ public class RebreanuIntersection {
         p3.SetName("iRbr_OP1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iRbr_Usrreq1");
         pn.PlaceList.add(p4);
 
@@ -42,8 +44,9 @@ public class RebreanuIntersection {
         p5.SetName("iRbr_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iRbr_OPreq1");
+        p6.Value = new TransferOperation("localhost", "1092", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
@@ -71,7 +74,7 @@ public class RebreanuIntersection {
         p11.SetName("iRbr_OP2");
         pn.PlaceList.add(p11);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iRbr_Usrreq2");
         pn.PlaceList.add(p12);
 
@@ -79,8 +82,9 @@ public class RebreanuIntersection {
         p13.SetName("iRbr_PPTL2");
         pn.PlaceList.add(p13);
 
-        DataCar p14 = new DataCar();
+        DataTransfer p14 = new DataTransfer();
         p14.SetName("iRbr_OPreq2");
+        p14.Value = new TransferOperation("localhost", "1093", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();
@@ -108,7 +112,7 @@ public class RebreanuIntersection {
         p19.SetName("iRbr_OP3");
         pn.PlaceList.add(p19);
 
-        DataCar p20 = new DataCar();
+        DataString p20 = new DataString();
         p20.SetName("iRbr_Usrreq3");
         pn.PlaceList.add(p20);
 
@@ -116,8 +120,9 @@ public class RebreanuIntersection {
         p21.SetName("iRbr_PPTL3");
         pn.PlaceList.add(p21);
 
-        DataCar p22 = new DataCar();
+        DataTransfer p22 = new DataTransfer();
         p22.SetName("iRbr_OPreq3");
+        p22.Value = new TransferOperation("localhost", "1094", "Userreq");
         pn.PlaceList.add(p22);
 
         DataCar p23 = new DataCar();
@@ -145,7 +150,7 @@ public class RebreanuIntersection {
         p27.SetName("iRbr_OP4");
         pn.PlaceList.add(p27);
 
-        DataCar p28 = new DataCar();
+        DataString p28 = new DataString();
         p28.SetName("iRbr_Usrreq4");
         pn.PlaceList.add(p28);
 
@@ -153,8 +158,9 @@ public class RebreanuIntersection {
         p29.SetName("iRbr_PPTL4");
         pn.PlaceList.add(p29);
 
-        DataCar p30 = new DataCar();
+        DataTransfer p30 = new DataTransfer();
         p30.SetName("iRbr_OPreq4");
+        p30.Value = new TransferOperation("localhost", "1095", "Userreq");
         pn.PlaceList.add(p30);
 
         DataCar p31 = new DataCar();

@@ -4,6 +4,8 @@ import Components.*;
 import DataObjects.DataCar;
 import DataObjects.DataCarQueue;
 import DataObjects.DataString;
+import DataObjects.DataTransfer;
+import DataOnly.TransferOperation;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
@@ -34,7 +36,7 @@ public class Vuia1Intersection {
         p3.SetName("iVuia_OP1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iVuia_Usrreq1");
         pn.PlaceList.add(p4);
 
@@ -42,8 +44,9 @@ public class Vuia1Intersection {
         p5.SetName("iVuia_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iVuia_OPreq1");
+        p6.Value = new TransferOperation("localhost", "1099", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
@@ -71,7 +74,7 @@ public class Vuia1Intersection {
         p11.SetName("iVuia_OP4");
         pn.PlaceList.add(p11);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iVuia_Usrreq4");
         pn.PlaceList.add(p12);
 
@@ -79,8 +82,9 @@ public class Vuia1Intersection {
         p13.SetName("iVuia_PPTL4");
         pn.PlaceList.add(p13);
 
-        DataCar p14 = new DataCar();
+        DataTransfer p14 = new DataTransfer();
         p14.SetName("iVuia_OPreq4");
+        p14.Value = new TransferOperation("localhost", "1102", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();

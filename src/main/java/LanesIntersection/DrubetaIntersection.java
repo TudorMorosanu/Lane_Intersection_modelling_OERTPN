@@ -4,6 +4,8 @@ import Components.*;
 import DataObjects.DataCar;
 import DataObjects.DataCarQueue;
 import DataObjects.DataString;
+import DataObjects.DataTransfer;
+import DataOnly.TransferOperation;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
@@ -34,7 +36,7 @@ public class DrubetaIntersection {
         p3.SetName("iDrub_OP1");
         pn.PlaceList.add(p3);
 
-        DataCar p4 = new DataCar();
+        DataString p4 = new DataString();
         p4.SetName("iDrub_Usrreq1");
         pn.PlaceList.add(p4);
 
@@ -42,8 +44,9 @@ public class DrubetaIntersection {
         p5.SetName("iDrub_PPTL1");
         pn.PlaceList.add(p5);
 
-        DataCar p6 = new DataCar();
+        DataTransfer p6 = new DataTransfer();
         p6.SetName("iDrub_OPreq1");
+        p6.Value = new TransferOperation("localhost", "1087", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
@@ -71,7 +74,7 @@ public class DrubetaIntersection {
         p11.SetName("iDrub_OP2");
         pn.PlaceList.add(p11);
 
-        DataCar p12 = new DataCar();
+        DataString p12 = new DataString();
         p12.SetName("iDrub_Usrreq2");
         pn.PlaceList.add(p12);
 
@@ -79,8 +82,9 @@ public class DrubetaIntersection {
         p13.SetName("iDrub_PPTL2");
         pn.PlaceList.add(p13);
 
-        DataCar p14 = new DataCar();
+        DataTransfer p14 = new DataTransfer();
         p14.SetName("iDrub_OPreq2");
+        p14.Value = new TransferOperation("localhost", "1088", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();
@@ -108,7 +112,7 @@ public class DrubetaIntersection {
         p19.SetName("iDrub_OP3");
         pn.PlaceList.add(p19);
 
-        DataCar p20 = new DataCar();
+        DataString p20 = new DataString();
         p20.SetName("iDrub_Usrreq3");
         pn.PlaceList.add(p20);
 
@@ -116,8 +120,9 @@ public class DrubetaIntersection {
         p21.SetName("iDrub_PPTL3");
         pn.PlaceList.add(p21);
 
-        DataCar p22 = new DataCar();
+        DataTransfer p22 = new DataTransfer();
         p22.SetName("iDrub_OPreq3");
+        p22.Value = new TransferOperation("localhost", "1089", "Userreq");
         pn.PlaceList.add(p22);
 
         DataCar p23 = new DataCar();
@@ -145,7 +150,7 @@ public class DrubetaIntersection {
         p27.SetName("iDrub_OP4");
         pn.PlaceList.add(p27);
 
-        DataCar p28 = new DataCar();
+        DataString p28 = new DataString();
         p28.SetName("iDrub_Usrreq4");
         pn.PlaceList.add(p28);
 
@@ -153,8 +158,9 @@ public class DrubetaIntersection {
         p29.SetName("iDrub_PPTL4");
         pn.PlaceList.add(p29);
 
-        DataCar p30 = new DataCar();
+        DataTransfer p30 = new DataTransfer();
         p30.SetName("iDrub_OPreq4");
+        p6.Value = new TransferOperation("localhost", "1090", "Userreq");
         pn.PlaceList.add(p30);
 
         DataCar p31 = new DataCar();
