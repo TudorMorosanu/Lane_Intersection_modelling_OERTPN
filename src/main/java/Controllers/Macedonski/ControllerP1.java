@@ -1,4 +1,4 @@
-package Controllers.Drubeta;
+package Controllers.Macedonski;
 
 import Components.*;
 import DataObjects.DataString;
@@ -13,7 +13,7 @@ public class ControllerP1 {
     public static void start() {
         PetriNet pn = new PetriNet();
         pn.PetriNetName = "ControllerP1";
-        pn.NetworkPort = 1087;
+        pn.NetworkPort = 1091;
 
         DataString green = new DataString();
         green.SetName("green");
@@ -62,12 +62,12 @@ public class ControllerP1 {
 
         DataTransfer P_TL = new DataTransfer();
         P_TL.SetName("P_TL");
-        P_TL.Value = new TransferOperation("localhost", "1080", "iDrub_CPTL1");
+        P_TL.Value = new TransferOperation("localhost", "1080", "iMac_CPTL1");
         pn.PlaceList.add(P_TL);
 
         DataTransfer P_PTL = new DataTransfer();
         P_PTL.SetName("P_PTL");
-        P_PTL.Value = new TransferOperation("localhost", "1080", "iDrub_PPTL1");
+        P_PTL.Value = new TransferOperation("localhost", "1080", "iMac_PPTL1");
         pn.PlaceList.add(P_PTL);
 
         // iniT ------------------------------------------------

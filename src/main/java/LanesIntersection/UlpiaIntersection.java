@@ -38,7 +38,7 @@ public class UlpiaIntersection {
         p4.SetName("iUlp_Usrreq1");
         pn.PlaceList.add(p4);
 
-        DataCar p5 = new DataCar();
+        DataString p5 = new DataString();
         p5.SetName("iUlp_PPTL1");
         pn.PlaceList.add(p5);
 
@@ -50,9 +50,13 @@ public class UlpiaIntersection {
         p7.SetName("iUlp_Pb1");
         pn.PlaceList.add(p7);
 
-        DataCar p8 = new DataCar();
+        DataString p8 = new DataString();
         p8.SetName("iUlp_PTL1");
         pn.PlaceList.add(p8);
+
+        DataString p30 = new DataString();
+        p30.SetName("iUlp_CPTL1");
+        pn.PlaceList.add(p30);
 
         DataCar p9 = new DataCar();
         p9.SetName("iUlp_Pa2");
@@ -71,7 +75,7 @@ public class UlpiaIntersection {
         p12.SetName("iUlp_Usrreq2");
         pn.PlaceList.add(p12);
 
-        DataCar p13 = new DataCar();
+        DataString p13 = new DataString();
         p13.SetName("iUlp_PPTL2");
         pn.PlaceList.add(p13);
 
@@ -83,9 +87,13 @@ public class UlpiaIntersection {
         p15.SetName("iUlp_Pb2");
         pn.PlaceList.add(p15);
 
-        DataCar p16 = new DataCar();
+        DataString p16 = new DataString();
         p16.SetName("iUlp_PTL2");
         pn.PlaceList.add(p16);
+
+        DataString p31 = new DataString();
+        p31.SetName("iUlp_CPTL2");
+        pn.PlaceList.add(p31);
 
         DataCar p17 = new DataCar();
         p17.SetName("iUlp_Pa4");
@@ -104,7 +112,7 @@ public class UlpiaIntersection {
         p20.SetName("iUlp_Usrreq4");
         pn.PlaceList.add(p20);
 
-        DataCar p21 = new DataCar();
+        DataString p21 = new DataString();
         p21.SetName("iUlp_PPTL4");
         pn.PlaceList.add(p21);
 
@@ -116,7 +124,7 @@ public class UlpiaIntersection {
         p23.SetName("iUlp_Pb4");
         pn.PlaceList.add(p23);
 
-        DataCar p24 = new DataCar();
+        DataString p24 = new DataString();
         p24.SetName("iUlp_PTL4");
         pn.PlaceList.add(p24);
 
@@ -201,7 +209,9 @@ public class UlpiaIntersection {
         // First guard
         Condition T3Ct1_1 = new Condition(t3, "iUlp_Px1", TransitionCondition.HaveCar);
         Condition T3Ct1_2 = new Condition(t3, "iUlp_PTL1", TransitionCondition.Equal, "green");
+        Condition T3Ct1_3 = new Condition(t3, "iUlp_CPTL1", TransitionCondition.Equal, "green");
         T3Ct1_1.SetNextCondition(LogicConnector.AND, T3Ct1_2);
+        T3Ct1_2.SetNextCondition(LogicConnector.AND, T3Ct1_3);
 
         GuardMapping grdT3_1 = new GuardMapping();
         grdT3_1.condition = T3Ct1_1;
@@ -314,7 +324,9 @@ public class UlpiaIntersection {
         // First guard
         Condition t7Ct1_1 = new Condition(t7, "iUlp_Px2", TransitionCondition.HaveCar);
         Condition t7Ct1_2 = new Condition(t7, "iUlp_PTL2", TransitionCondition.Equal, "green");
+        Condition t7Ct1_3 = new Condition(t7, "iUlp_CPTL2", TransitionCondition.Equal, "green");
         t7Ct1_1.SetNextCondition(LogicConnector.AND, t7Ct1_2);
+        t7Ct1_2.SetNextCondition(LogicConnector.AND, t7Ct1_3);
 
         GuardMapping grdt7_1 = new GuardMapping();
         grdt7_1.condition = t7Ct1_1;
@@ -399,10 +411,12 @@ public class UlpiaIntersection {
         t10.TransitionName = "iUlp_Tge2";
         t10.InputPlaceName.add("iUlp_Po2");
 
-        Condition t10Ct1 = new Condition(t10, "iUlp_Po2", TransitionCondition.HaveCar);
+        Condition t10Ct1_1 = new Condition(t10, "iUlp_Po2", TransitionCondition.HaveCar);
+        Condition t10Ct1_2 = new Condition(t10, "iUlp_CPTL2", TransitionCondition.Equal, "green");
+        t10Ct1_1.SetNextCondition(LogicConnector.AND, t10Ct1_2);
 
         GuardMapping grdt10 = new GuardMapping();
-        grdt10.condition = t10Ct1;
+        grdt10.condition = t10Ct1_1;
 
         grdt10.Activations.add(new Activation(t10, "iUlp_Po2", TransitionOperation.PopElementWithoutTarget, "iVuia_Pa4"));
         t10.GuardMappingList.add(grdt10);
@@ -504,7 +518,9 @@ public class UlpiaIntersection {
         // First guard
         Condition T15Ct1_1 = new Condition(t15, "iUlp_Px4", TransitionCondition.HaveCar);
         Condition T15Ct1_2 = new Condition(t15, "iUlp_PTL4", TransitionCondition.Equal, "green");
+        Condition T15Ct1_3 = new Condition(t15, "iUlp_CPTL4", TransitionCondition.Equal, "green");
         T15Ct1_1.SetNextCondition(LogicConnector.AND, T15Ct1_2);
+        T15Ct1_2.SetNextCondition(LogicConnector.AND, T15Ct1_3);
 
         GuardMapping grdT15_1 = new GuardMapping();
         grdT15_1.condition = T15Ct1_1;
@@ -589,10 +605,13 @@ public class UlpiaIntersection {
         t18.TransitionName = "iUlp_Tge4";
         t18.InputPlaceName.add("iUlp_Po4");
 
-        Condition T18Ct1 = new Condition(t18, "iUlp_Po4", TransitionCondition.HaveCar);
+        Condition T18Ct1_1 = new Condition(t18, "iUlp_Po4", TransitionCondition.HaveCar);
+        Condition T18Ct1_2 = new Condition(t18, "iUlp_CPTL4", TransitionCondition.Equal, "green");
+        T18Ct1_1.SetNextCondition(LogicConnector.AND, T18Ct1_2);
+
 
         GuardMapping grdT18 = new GuardMapping();
-        grdT18.condition = T18Ct1;
+        grdT18.condition = T18Ct1_1;
 
         grdT18.Activations.add(new Activation(t18, "iUlp_Po4", TransitionOperation.PopElementWithoutTarget, "iDrub_Pa2"));
         t18.GuardMappingList.add(grdT18);
