@@ -1340,66 +1340,6 @@
                 <value>0</value>
             </capacity>
         </place>
-        <place id="P147">
-            <graphics>
-                <position x="1155.0" y="5025.0"/>
-            </graphics>
-            <name>
-                <value>iMac_PPTL4</value>
-                <graphics>
-                    <offset x="-5.0" y="35.0"/>
-                </graphics>
-            </name>
-            <initialMarking>
-                <value>0</value>
-                <graphics>
-                    <offset x="0.0" y="0.0"/>
-                </graphics>
-            </initialMarking>
-            <capacity>
-                <value>0</value>
-            </capacity>
-        </place>
-        <place id="P148">
-            <graphics>
-                <position x="1215.0" y="5025.0"/>
-            </graphics>
-            <name>
-                <value>iMac_Usrreq4</value>
-                <graphics>
-                    <offset x="-5.0" y="35.0"/>
-                </graphics>
-            </name>
-            <initialMarking>
-                <value>0</value>
-                <graphics>
-                    <offset x="0.0" y="0.0"/>
-                </graphics>
-            </initialMarking>
-            <capacity>
-                <value>0</value>
-            </capacity>
-        </place>
-        <place id="P149">
-            <graphics>
-                <position x="1095.0" y="5025.0"/>
-            </graphics>
-            <name>
-                <value>iMac_OPreq4</value>
-                <graphics>
-                    <offset x="-5.0" y="35.0"/>
-                </graphics>
-            </name>
-            <initialMarking>
-                <value>0</value>
-                <graphics>
-                    <offset x="0.0" y="0.0"/>
-                </graphics>
-            </initialMarking>
-            <capacity>
-                <value>0</value>
-            </capacity>
-        </place>
         <place id="P15">
             <graphics>
                 <position x="840.0" y="5085.0"/>
@@ -8101,32 +8041,6 @@
             <arcpath id="001" x="956" y="4917" curvePoint="false"/>
             <type value="normal"/>
         </arc>
-        <arc id="P147 to T20" source="P147" target="T20">
-            <graphics/>
-            <inscription>
-                <value>1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="1167" y="5051" curvePoint="false"/>
-            <arcpath id="001" x="1167" y="5082" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="P148 to T20" source="P148" target="T20">
-            <graphics/>
-            <inscription>
-                <value>1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="1216" y="5048" curvePoint="false"/>
-            <arcpath id="001" x="1172" y="5089" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
         <arc id="P14 to T10" source="P14" target="T10">
             <graphics/>
             <inscription>
@@ -9423,7 +9337,7 @@
             <tagged>
                 <value>false</value>
             </tagged>
-            <arcpath id="000" x="2230" y="5336" curvePoint="false"/>
+            <arcpath id="000" x="2231" y="5336" curvePoint="false"/>
             <arcpath id="001" x="2226" y="5376" curvePoint="false"/>
             <type value="normal"/>
         </arc>
@@ -9567,7 +9481,7 @@
                 <value>false</value>
             </tagged>
             <arcpath id="000" x="1212" y="5098" curvePoint="false"/>
-            <arcpath id="001" x="1171" y="5103" curvePoint="false"/>
+            <arcpath id="001" x="1171" y="5102" curvePoint="false"/>
             <type value="normal"/>
         </arc>
         <arc id="P25 to T29" source="P25" target="T29">
@@ -12378,32 +12292,6 @@
             <arcpath id="001" x="1631" y="5096" curvePoint="false"/>
             <type value="normal"/>
         </arc>
-        <arc id="T20 to P147" source="T20" target="P147">
-            <graphics/>
-            <inscription>
-                <value>1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="1167" y="5082" curvePoint="false"/>
-            <arcpath id="001" x="1167" y="5051" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="T20 to P149" source="T20" target="P149">
-            <graphics/>
-            <inscription>
-                <value>1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="1162" y="5092" curvePoint="false"/>
-            <arcpath id="001" x="1117" y="5048" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
         <arc id="T20 to P25" source="T20" target="P25">
             <graphics/>
             <inscription>
@@ -12413,8 +12301,8 @@
             <tagged>
                 <value>false</value>
             </tagged>
-            <arcpath id="000" x="1172" y="5096" curvePoint="false"/>
-            <arcpath id="001" x="1212" y="5096" curvePoint="false"/>
+            <arcpath id="000" x="1172" y="5092" curvePoint="false"/>
+            <arcpath id="001" x="1212" y="5095" curvePoint="false"/>
             <type value="normal"/>
         </arc>
         <arc id="T20 to P26" source="T20" target="P26">
@@ -12439,8 +12327,8 @@
             <tagged>
                 <value>false</value>
             </tagged>
-            <arcpath id="000" x="1161" y="5102" curvePoint="false"/>
-            <arcpath id="001" x="1121" y="5098" curvePoint="false"/>
+            <arcpath id="000" x="1161" y="5097" curvePoint="false"/>
+            <arcpath id="001" x="1121" y="5097" curvePoint="false"/>
             <type value="normal"/>
         </arc>
         <arc id="T21(1) to P27(1)" source="T21(1)" target="P27(1)">
