@@ -4,6 +4,8 @@ import Components.*;
 import DataObjects.DataCar;
 import DataObjects.DataCarQueue;
 import DataObjects.DataString;
+import DataObjects.DataTransfer;
+import DataOnly.TransferOperation;
 import Enumerations.LogicConnector;
 import Enumerations.TransitionCondition;
 import Enumerations.TransitionOperation;
@@ -30,8 +32,9 @@ public class Vuia1Intersection {
         p2.SetName("iVuia_Px1");
         pn.PlaceList.add(p2);
 
-        DataCar p3 = new DataCar();
+        DataTransfer p3 = new DataTransfer();
         p3.SetName("iVuia_OP1");
+        p3.Value = new TransferOperation("localhost", "1083" , "in1");
         pn.PlaceList.add(p3);
 
         DataCar p4 = new DataCar();
@@ -63,8 +66,9 @@ public class Vuia1Intersection {
         p10.SetName("iVuia_Px4");
         pn.PlaceList.add(p10);
 
-        DataCar p11 = new DataCar();
+        DataTransfer p11 = new DataTransfer();
         p11.SetName("iVuia_OP4");
+        p11.Value = new TransferOperation("localhost", "1083" , "in2");
         pn.PlaceList.add(p11);
 
         DataCar p12 = new DataCar();
@@ -147,6 +151,7 @@ public class Vuia1Intersection {
         grdT2.Activations.add(new Activation(t2, "full", TransitionOperation.SendOverNetwork, "iVuia_OP1"));
         t2.GuardMappingList.add(grdT2);
         t2.Delay = 0;
+        t2.IsAsync = true;
         pn.Transitions.add(t2);
 
     }
@@ -303,6 +308,7 @@ public class Vuia1Intersection {
         grdT8.Activations.add(new Activation(t8, "full", TransitionOperation.SendOverNetwork, "iVuia_OP4"));
         t8.GuardMappingList.add(grdT8);
         t8.Delay = 0;
+        t8.IsAsync = true;
         pn.Transitions.add(t8);
     }
 
