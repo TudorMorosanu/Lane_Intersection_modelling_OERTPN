@@ -47,7 +47,7 @@ public class UlpiaIntersection {
 
         DataTransfer p6 = new DataTransfer();
         p6.SetName("iUlp_OPreq1");
-        p6.Value = new TransferOperation("localhost", "1096", "Userreq");
+        p6.Value = new TransferOperation("localhost", "1077", "Userreq");
         pn.PlaceList.add(p6);
 
         DataCar p7 = new DataCar();
@@ -86,7 +86,7 @@ public class UlpiaIntersection {
 
         DataTransfer p14 = new DataTransfer();
         p14.SetName("iUlp_OPreq2");
-        p14.Value = new TransferOperation("localhost", "1097", "Userreq");
+        p14.Value = new TransferOperation("localhost", "1078", "Userreq");
         pn.PlaceList.add(p14);
 
         DataCar p15 = new DataCar();
@@ -125,7 +125,7 @@ public class UlpiaIntersection {
 
         DataTransfer p22 = new DataTransfer();
         p22.SetName("iUlp_OPreq4");
-        p22.Value = new TransferOperation("localhost", "1098", "Userreq");
+        p22.Value = new TransferOperation("localhost", "1079", "Userreq");
         pn.PlaceList.add(p22);
 
         DataCar p23 = new DataCar();
