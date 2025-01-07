@@ -28,17 +28,17 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p1);
 
         DataCarQueue px1_1 = new DataCarQueue();
-        px1_1.Value.Size = 10;
+        px1_1.Value.Size = 3;
         px1_1.SetName("iRbr_Px1_1");
         pn.PlaceList.add(px1_1);
 
         DataCarQueue px1_2 = new DataCarQueue();
-        px1_2.Value.Size = 10;
+        px1_2.Value.Size = 3;
         px1_2.SetName("iRbr_Px1_2");
         pn.PlaceList.add(px1_2);
 
         DataCarQueue p_station1 = new DataCarQueue();
-        p_station1.Value.Size = 10;
+        p_station1.Value.Size = 3;
         p_station1.SetName("iRbr_Pstation1");
         pn.PlaceList.add(p_station1);
 
@@ -77,17 +77,17 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p9);
 
         DataCarQueue px2_1 = new DataCarQueue();
-        px2_1.Value.Size = 10;
+        px2_1.Value.Size = 3;
         px2_1.SetName("iRbr_Px2_1");
         pn.PlaceList.add(px2_1);
 
         DataCarQueue px2_2 = new DataCarQueue();
-        px2_2.Value.Size = 10;
+        px2_2.Value.Size = 3;
         px2_2.SetName("iRbr_Px2_2");
         pn.PlaceList.add(px2_2);
 
         DataCarQueue p_station2 = new DataCarQueue();
-        p_station2.Value.Size = 10;
+        p_station2.Value.Size = 3;
         p_station2.SetName("iRbr_Pstation2");
         pn.PlaceList.add(p_station2);
 
@@ -126,17 +126,17 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p17);
 
         DataCarQueue px3_1 = new DataCarQueue();
-        px3_1.Value.Size = 10;
+        px3_1.Value.Size = 3;
         px3_1.SetName("iRbr_Px3_1");
         pn.PlaceList.add(px3_1);
 
         DataCarQueue px3_2 = new DataCarQueue();
-        px3_2.Value.Size = 10;
+        px3_2.Value.Size = 3;
         px3_2.SetName("iRbr_Px3_2");
         pn.PlaceList.add(px3_2);
 
         DataCarQueue p_station3 = new DataCarQueue();
-        p_station3.Value.Size = 10;
+        p_station3.Value.Size = 3;
         p_station3.SetName("iRbr_Pstation3");
         pn.PlaceList.add(p_station3);
 
@@ -175,17 +175,17 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p25);
 
         DataCarQueue px4_1 = new DataCarQueue();
-        px4_1.Value.Size = 10;
+        px4_1.Value.Size = 3;
         px4_1.SetName("iRbr_Px4_1");
         pn.PlaceList.add(px4_1);
 
         DataCarQueue px4_2 = new DataCarQueue();
-        px4_2.Value.Size = 10;
+        px4_2.Value.Size = 3;
         px4_2.SetName("iRbr_Px4_2");
         pn.PlaceList.add(px4_2);
 
         DataCarQueue p_station4 = new DataCarQueue();
-        p_station4.Value.Size = 10;
+        p_station4.Value.Size = 3;
         p_station4.SetName("iRbr_Pstation4");
         pn.PlaceList.add(p_station4);
 
@@ -220,7 +220,7 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p45);
 
         DataCarQueue p33 = new DataCarQueue();
-        p33.Value.Size = 10;
+        p33.Value.Size = 3;
         p33.SetName("iRbr_Po1");
         pn.PlaceList.add(p33);
 
@@ -229,7 +229,7 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p34);
 
         DataCarQueue p35 = new DataCarQueue();
-        p35.Value.Size = 10;
+        p35.Value.Size = 3;
         p35.SetName("iRbr_Po2");
         pn.PlaceList.add(p35);
 
@@ -238,7 +238,7 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p36);
 
         DataCarQueue p37 = new DataCarQueue();
-        p37.Value.Size = 10;
+        p37.Value.Size = 3;
         p37.SetName("iRbr_Po3");
         pn.PlaceList.add(p37);
 
@@ -247,12 +247,12 @@ public class RebreanuIntersection {
         pn.PlaceList.add(p38);
 
         DataCarQueue p39 = new DataCarQueue();
-        p39.Value.Size = 10;
+        p39.Value.Size = 3;
         p39.SetName("iRbr_Po4");
         pn.PlaceList.add(p39);
 
         DataCarQueue p41 = new DataCarQueue();
-        p41.Value.Size = 10;
+        p41.Value.Size = 3;
         p41.SetName("iRbr_PI");
         pn.PlaceList.add(p41);
 
