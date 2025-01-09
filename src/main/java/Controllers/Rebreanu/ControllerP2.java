@@ -12,7 +12,7 @@ public class ControllerP2 {
 
     public static void start() {
         PetriNet pn = new PetriNet();
-        pn.PetriNetName = "ControllerP1";
+        pn.PetriNetName = "Controller Rebreanu P2";
         pn.NetworkPort = 1093;
 
         DataString green = new DataString();

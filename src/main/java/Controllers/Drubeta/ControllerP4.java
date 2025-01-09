@@ -12,7 +12,7 @@ public class ControllerP4 {
 
     public static void start() {
         PetriNet pn = new PetriNet();
-        pn.PetriNetName = "ControllerP1";
+        pn.PetriNetName = "Controller Drubeta P4";
         pn.NetworkPort = 1090;
 
         DataString green = new DataString();

@@ -34,12 +34,12 @@ public class ControllerMacedonski {
 
         DataInteger Five = new DataInteger();
         Five.SetName("Five");
-        Five.SetValue(5);
+        Five.SetValue(1);
         pn.ConstantPlaceList.add(Five);
 
         DataInteger Ten = new DataInteger();
         Ten.SetName("Ten");
-        Ten.SetValue(10);
+        Ten.SetValue(3);
         pn.ConstantPlaceList.add(Ten);
 
         DataTransfer op1 = new DataTransfer();
