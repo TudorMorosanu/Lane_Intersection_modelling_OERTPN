@@ -165,8 +165,8 @@ public class ControllerRebreanu {
         GuardMapping grdT1 = new GuardMapping();
         grdT1.condition = T1Ct1;
         grdT1.Activations.add(new Activation(t1, "r1r2r3r4", TransitionOperation.Move, "g1r2r3r4"));
-        grdT1.Activations.add(new Activation(t1, "r1r2r3r4", TransitionOperation.Move, "P_f1"));
         grdT1.Activations.add(new Activation(t1, "green", TransitionOperation.SendOverNetwork, "op1"));
+        grdT1.Activations.add(new Activation(t1, "r1r2r3r4", TransitionOperation.Move, "P_f1"));
         t1.GuardMappingList.add(grdT1);
 
         t1.Delay = 1;
@@ -198,9 +198,9 @@ public class ControllerRebreanu {
         GuardMapping grdT3 = new GuardMapping();
         grdT3.condition = T3Ct1;
         grdT3.Activations.add(new Activation(t3, "y1r2r3r4", TransitionOperation.Move, "r1g2r3r4"));
-        grdT3.Activations.add(new Activation(t3, "y1r2r3r4", TransitionOperation.Move, "P_f2"));
         grdT3.Activations.add(new Activation(t3, "red", TransitionOperation.SendOverNetwork, "op1"));
         grdT3.Activations.add(new Activation(t3, "green", TransitionOperation.SendOverNetwork, "op2"));
+        grdT3.Activations.add(new Activation(t3, "y1r2r3r4", TransitionOperation.Move, "P_f2"));
         t3.GuardMappingList.add(grdT3);
 
         t3.Delay = 1;
@@ -232,7 +232,6 @@ public class ControllerRebreanu {
         GuardMapping grdT5 = new GuardMapping();
         grdT5.condition = T5Ct1;
         grdT5.Activations.add(new Activation(t5, "r1y2r3r4", TransitionOperation.Move, "r1r2g3r4"));
-        grdT5.Activations.add(new Activation(t5, "r1y2r3r4", TransitionOperation.Move, "P_f3"));
         grdT5.Activations.add(new Activation(t5, "red", TransitionOperation.SendOverNetwork, "op2"));
         grdT5.Activations.add(new Activation(t5, "green", TransitionOperation.SendOverNetwork, "op3"));
         t5.GuardMappingList.add(grdT5);
