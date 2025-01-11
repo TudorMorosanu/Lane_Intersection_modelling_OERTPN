@@ -1,6 +1,7 @@
 package Controllers.Drubeta;
 
 import Components.*;
+import DataObjects.DataInteger;
 import DataObjects.DataString;
 import DataObjects.DataTransfer;
 import DataOnly.TransferOperation;
@@ -31,14 +32,14 @@ public class ControllerDrubeta {
         red.SetValue("red");
         pn.ConstantPlaceList.add(red);
 
-        DataString Five = new DataString();
+        DataInteger Five = new DataInteger();
         Five.SetName("Five");
-        Five.SetValue(5);
+        Five.SetValue(1);
         pn.ConstantPlaceList.add(Five);
 
-        DataString Ten = new DataString();
+        DataInteger Ten = new DataInteger();
         Ten.SetName("Ten");
-        Ten.SetValue(10);
+        Ten.SetValue(3);
         pn.ConstantPlaceList.add(Ten);
 
         DataTransfer op1 = new DataTransfer();
@@ -310,7 +311,6 @@ public class ControllerDrubeta {
         t_f1.TransitionName = "t_f1";
         t_f1.InputPlaceName.add("in1");
         t_f1.InputPlaceName.add("P_f1");
-        t_f1.IsAsync = true;
 
         Condition Tf1Ct1 = new Condition(t_f1, "in1", TransitionCondition.IsNull);
         Condition Tf1Ct2 = new Condition(t_f1, "P_f1", TransitionCondition.NotNull);
@@ -330,6 +330,7 @@ public class ControllerDrubeta {
         t_f1.GuardMappingList.add(grdTf1_2);
 
         t_f1.Delay = 5;
+        t_f1.IsAsync = true;
         pn.Transitions.add(t_f1);
 
         // t_f2
@@ -338,7 +339,6 @@ public class ControllerDrubeta {
         t_f2.TransitionName = "t_f2";
         t_f2.InputPlaceName.add("in2");
         t_f2.InputPlaceName.add("P_f2");
-        t_f2.IsAsync = true;
 
         Condition Tf2Ct1 = new Condition(t_f2, "in2", TransitionCondition.IsNull);
         Condition Tf2Ct2 = new Condition(t_f2, "P_f2", TransitionCondition.NotNull);
@@ -351,7 +351,7 @@ public class ControllerDrubeta {
         GuardMapping grdTf2_1 = new GuardMapping();
         grdTf2_1.condition = Tf2Ct1;
         grdTf2_1.Activations.add(new Activation(t4, "Five", TransitionOperation.DynamicDelay, ""));
-        t_f1.GuardMappingList.add(grdTf2_1);
+        t_f2.GuardMappingList.add(grdTf2_1);
 
         GuardMapping grdTf2_2 = new GuardMapping();
         grdTf2_2.condition = Tf2Ct3;
@@ -359,6 +359,7 @@ public class ControllerDrubeta {
         t_f2.GuardMappingList.add(grdTf2_2);
 
         t_f2.Delay = 5;
+        t_f2.IsAsync = true;
         pn.Transitions.add(t_f2);
 
         // t_f3
@@ -367,7 +368,6 @@ public class ControllerDrubeta {
         t_f3.TransitionName = "t_f3";
         t_f3.InputPlaceName.add("in3");
         t_f3.InputPlaceName.add("P_f3");
-        t_f3.IsAsync = true;
 
         Condition Tf3Ct1 = new Condition(t_f3, "in3", TransitionCondition.IsNull);
         Condition Tf3Ct2 = new Condition(t_f3, "P_f3", TransitionCondition.NotNull);
@@ -388,6 +388,7 @@ public class ControllerDrubeta {
         t_f3.GuardMappingList.add(grdTf3_2);
 
         t_f3.Delay = 5;
+        t_f3.IsAsync = true;
         pn.Transitions.add(t_f3);
 
         // t_f4
@@ -396,7 +397,6 @@ public class ControllerDrubeta {
         t_f4.TransitionName = "t_f4";
         t_f4.InputPlaceName.add("in4");
         t_f4.InputPlaceName.add("P_f4");
-        t_f4.IsAsync = true;
 
         Condition Tf4Ct1 = new Condition(t_f4, "in4", TransitionCondition.IsNull);
         Condition Tf4Ct2 = new Condition(t_f4, "P_f4", TransitionCondition.NotNull);
@@ -417,6 +417,7 @@ public class ControllerDrubeta {
         t_f4.GuardMappingList.add(grdTf4_2);
 
         t_f4.Delay = 5;
+        t_f4.IsAsync = true;
         pn.Transitions.add(t_f4);
 
 

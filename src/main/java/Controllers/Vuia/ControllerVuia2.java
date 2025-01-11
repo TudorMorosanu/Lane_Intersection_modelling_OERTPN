@@ -1,6 +1,7 @@
 package Controllers.Vuia;
 
 import Components.*;
+import DataObjects.DataInteger;
 import DataObjects.DataString;
 import DataObjects.DataTransfer;
 import DataOnly.TransferOperation;
@@ -31,14 +32,14 @@ public class ControllerVuia2 {
         red.SetValue("red");
         pn.ConstantPlaceList.add(red);
 
-        DataString Five = new DataString();
+        DataInteger Five = new DataInteger();
         Five.SetName("Five");
-        Five.SetValue(5);
+        Five.SetValue(1);
         pn.ConstantPlaceList.add(Five);
 
-        DataString Ten = new DataString();
+        DataInteger Ten = new DataInteger();
         Ten.SetName("Ten");
-        Ten.SetValue(10);
+        Ten.SetValue(3);
         pn.ConstantPlaceList.add(Ten);
 
         DataTransfer op1 = new DataTransfer();
@@ -239,7 +240,7 @@ public class ControllerVuia2 {
         GuardMapping grdTf2_1 = new GuardMapping();
         grdTf2_1.condition = Tf2Ct1;
         grdTf2_1.Activations.add(new Activation(t4, "Five", TransitionOperation.DynamicDelay, ""));
-        t_f1.GuardMappingList.add(grdTf2_1);
+        t_f2.GuardMappingList.add(grdTf2_1);
 
         GuardMapping grdTf2_2 = new GuardMapping();
         grdTf2_2.condition = Tf2Ct3;

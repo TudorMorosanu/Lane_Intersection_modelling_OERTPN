@@ -136,6 +136,10 @@ public class UlpiaIntersection {
         p24.SetName("iUlp_PTL4");
         pn.PlaceList.add(p24);
 
+        DataString p32 = new DataString();
+        p32.SetName("iUlp_CPTL4");
+        pn.PlaceList.add(p32);
+
         DataCarQueue p25 = new DataCarQueue();
         p25.Value.Size = 10;
         p25.SetName("iUlp_Po2");
