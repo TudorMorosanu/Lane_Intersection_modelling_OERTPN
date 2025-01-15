@@ -26,9 +26,9 @@ public class LanesStarter {
         Controllers.Vuia.ControllerP4.start();
 
         Controllers.Ulpia.ControllerUlpia.start();
-//        Controllers.Ulpia.ControllerP1.start();
-//        Controllers.Ulpia.ControllerP2.start();
-//        Controllers.Ulpia.ControllerP4.start();
+        Controllers.Ulpia.ControllerP1.start();
+        Controllers.Ulpia.ControllerP2.start();
+        Controllers.Ulpia.ControllerP4.start();
 
         Controllers.Drubeta.ControllerDrubeta.start();
         Controllers.Drubeta.ControllerP1.start();
